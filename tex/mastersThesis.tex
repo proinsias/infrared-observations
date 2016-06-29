@@ -1,0 +1,66 @@
+%   A flag and the \newif definition we will need to use it:
+%               \Draft gives draft output
+%               \Final gives final output
+\newif\ifDraft
+\def\Draft{\Drafttrue}
+\def\Final{\Draftfalse}
+\Final % Uncomment this for final output
+%\Draft % Uncomment this for draft output
+\ifDraft
+\documentclass[12pt,draft,a4paper]{report}
+\else
+\documentclass[12pt,a4paper]{report}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includeonly{standardPreamble,frontMasters,abstractMasters,thanksMasters,introductionMasters,j1655Masters,reductionMasters,elcMasters,conclusionMasters,irafMasters,diskMasters,lightcurveMasters}
+
+\include{standardPreamble}
+
+\renewcommand{\reftextbefore}{on the previous page}%
+
+\newcommand{\groj}{\mbox{GRO J1655--40}\xspace}
+\newcommand{\nova}{\mbox{Nova Scorpii 1994}\xspace}
+\newcommand{\iraf}{\texttt{IRAF}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%% Body %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\include{frontMasters}
+
+\pagenumbering{roman} 
+\setcounter{page}{1} 
+
+\tableofcontents   
+
+\include{abstractMasters}
+\include{thanksMasters}
+
+\pagenumbering{arabic}      
+
+%%%%%%%%%%%%%%%%%%%%%% Chapters %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{introductionMasters}
+\include{reductionMasters}
+\include{j1655Masters}
+\include{lightcurveMasters}
+\include{elcMasters}
+\include{diskMasters}
+\include{conclusionMasters}
+
+%%%%%%%%%%%%%%%%%%%%%% Appendices %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{appendix}
+\include{irafMasters}
+\end{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{aamnemonic,mybib}
+\bibliographystyle{aa}
+
+\end{document}
+

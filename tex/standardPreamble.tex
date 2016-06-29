@@ -1,0 +1,68 @@
+\renewcommand{\baselinestretch}{1.4}
+\setlength{\evensidemargin}{-1.0mm}
+\setlength{\oddsidemargin}{15mm}
+\setlength{\textwidth}{145mm}
+\setlength{\topmargin}{-12mm}
+\setlength{\headsep}{8mm}
+\setlength{\textheight}{230mm}
+\setlength{\footskip}{20mm}
+
+% Define space between paragraphs
+\newlength{\myparskip}
+% Set space between paragraphs to 5mm
+\setlength{\myparskip}{5mm}
+
+% For time printing
+\newcounter{hours}\newcounter{minutes}
+
+\usepackage{latexsym}	% Symbol environment
+\usepackage{ifthen}	% For operating system switches
+\usepackage{calc}	% For time printing
+\usepackage{varioref}	% For page-sensitive references
+\usepackage{graphicx}	% For graphics
+\usepackage{url}	% For urls
+\usepackage{paralist}	% For different types of lists
+\usepackage{astrobib}	% For aa style 
+\usepackage{fixfoot}	% For multiple references to same footnote
+\usepackage{xspace}	% To prevent problems with missing spaces
+
+% Switch for operating system - 0 (Linux), 1 (Mac).
+\newcounter{OS}
+\setcounter{OS}{0}
+
+% Hyphenation rules
+\hyphenation{ FORTRAN Ve-ne-zue-la se-par-a-tion}
+
+%% New Commands
+%
+\newcommand{\sun}{\ensuremath{_{\odot}}\xspace}
+\newcommand{\degr}{\hbox{$^\circ$}\xspace}
+\newcommand{\arcmin}{\hbox{$^\prime$}\xspace}
+\newcommand{\arcsec}{\hbox{$^{\prime\prime}$}\xspace}
+\newcommand{\fd}{\hbox{$.\!\!^{\rm d}$}}
+\newcommand{\fh}{\hbox{$.\!\!^{\rm h}$}}
+\newcommand{\fm}{\hbox{$.\!\!^{\rm m}$}}
+\newcommand{\fs}{\hbox{$.\!\!^{\rm s}$}}
+\newcommand{\fdg}{\hbox{$.\!\!^\circ$}}
+\newcommand{\farcm}{\hbox{$.\mkern-4mu^\prime$}}
+\newcommand{\farcs}{\hbox{$.\!\!^{\prime\prime}$}}
+\newcommand{\fp}{\hbox{$.\!\!^{\scriptscriptstyle\rm p}$}}
+%
+% From LaTex Intro Book
+%
+\newcommand{\Chi}{\raisebox{0.4ex}{$\chi$}\xspace}
+\newcommand{\lsim}{\mathrel{\hbox{\rlap{\lower.55ex\hbox{$\sim$}}
+\kern-.3em \raise.4ex \hbox{$<$}}}}
+\newcommand{\gsim}{\mathrel{\hbox{\rlap{\lower.55ex\hbox{$\sim$}}
+\kern-.3em \raise.4ex \hbox{$>$}}}}
+%
+% From LaTeX Companion
+\newcommand{\Printtime}{\setcounter{hours}{\time/60}%
+	\setcounter{minutes}{\time-\value{hours}*60}%
+	\ifthenelse{\value{hours}<10}{0}{}\thehours:%
+	\ifthenelse{\value{minutes}<10}{0}{}\theminutes}
+
+% From TeX FAQs
+% Thick lines in tables
+\setlength{\doublerulesep}{\arrayrulewidth}
+

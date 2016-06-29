@@ -1,0 +1,430 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IRAF %%%%%%%%%%%%%%%%%%%%
+
+\chapter{IRAF}
+\label{cha:IRAF}
+
+This appendix gives more specifics of the commands used for reduction
+and analysis. The parameters of some of the tasks are listed and
+discussed, and a description is given of the \texttt{DAOPHOT}
+procedure. %
+
+\vspace{\myparskip}
+
+Further details about the \iraf\ tasks are available from the
+online \iraf\ help, accessed using the \texttt{help} task
+within \iraf, or from the user manuals for \iraf\ %
+\cite{Barnes:1993} %
+and \texttt{DAOPHOT} %
+\cite{Davis:1994}. %  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Header %%%%%%%%%%%%%%%%%%%%
+
+\section{The Image Header}
+\label{cha:IRAF:sec:Imhead}
+
+Each \texttt{IMH} image contains a series of text lines, known as the
+\textbf{image header}, %
+in which the details of the observation are stored. The text serves as
+a digital copy of the observation log and is usually automatically
+added to the image at the observatory. %
+
+\vspace{\myparskip}
+
+This information is accessed in \iraf\ by using the
+\texttt{imheader} task, e.g., \texttt{imheader} \textit{image.imh}
+\textit{longheader=yes}. The \texttt{hselect} command can
+alternatively be run to output information selectively from the
+header. This enables the user to rapidly identify relevant images
+based on various properties of the images. For example, the user can
+quickly identify all the images of a particular target star system. %
+
+\vspace{\myparskip}
+
+Several important details usually included in the header are:
+
+\begin{itemize}
+
+\item The file name of the image.
+
+\item The location of the corresponding \texttt{IRAF} pixel file. 
+
+\item The type of object was observed, whether it was a star, flatfield or
+arc.
+
+\item The name of the star or arc observed.
+
+\item The detector and telescope used. 
+
+\item The slit employed for spectroscopic observations. 
+
+\item The observatory where the observation was made.
+
+\item The name(s) of the observer(s).
+
+\item The filter band selected.
+
+\item The Universal Date and Time at which the observation of the frame began.
+
+\item The Universal Time at the end of the frame observation.
+
+\item The sidereal time of the observation. 
+
+\item The integration time per coadd.
+
+\item The number of coadds.
+
+\item The right ascension and declination of the telescope.
+
+\item The airmass of the observation. 
+
+\end{itemize}
+Depending on the detector used, other information may also be inserted into
+the header. %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Photometry %%%%%%%%%%%%%%%%%%%%
+
+\section{Photometry}
+\label{cha:IRAF:sec:Photometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Imexamine %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{Imexamine}}
+\label{cha:IRAF:sec:Photometry:subsec:Imexamine}
+
+The \texttt{imexamine} routine is run to extract information
+interactively from an image displayed in the \texttt{DS9} image
+viewer. A single image may be examined, or a list of images. We used
+\texttt{imexamine} to perform aperture photometry on our images of
+\groj\ as follows:%
+
+\begin{itemize}
+
+\item
+We displayed an image using \texttt{DS9} and called the
+\texttt{imexamine} routine within IRAF. %
+
+\item
+Next, we edited the parameters for \texttt{imexamine} while the task was
+running using the ``\texttt{:epar}'' cursor command. We activated
+logging and set the name of the log (\textit{logfile}). %
+
+\item
+We then set the \textit{rimexamine} pset parameters
+(``\texttt{:epar r}''). These are used during aperture photometry and
+include: %
+
+
+	\begin{description}
+
+	\item[radius]
+
+	Aperture radius for aperture photometry. %
+
+	\item[magzero]
+
+	User defined zero point for magnitude scale. This value was
+	determined from: % 
+	\begin{eqnarray}
+	\label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:magzero}
+	\mathrm{magzero} = 10 + 2.5 \log{f_{10} I} - k \Chi,
+	\end{eqnarray}
+	where $f_{10}$ is the counts per second detected from a star of
+	magnitude 10, $k$ is the extinction coefficient for the
+	observatory, and $I$ and $\Chi$ are the total integration time
+	and the airmass for the observation, respectively. Then the
+	magnitude ($m$) of the star can be calculated by
+	\texttt{imexamine} using: %  
+	\begin{eqnarray}
+	\label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:mag}
+	m = \mathrm{magzero} - 2.5 \log_{10}{F},
+	\end{eqnarray}
+	where $F$ is the counts from the star, measured by aperture
+	photometry. %
+
+	\end{description}
+
+\item
+Using the cursor, we selected a star and performed aperture photometry
+on that star (``\texttt{a}''). \texttt{Imexamine} outputted properties
+of the star such as position, flux and magnitude to the file
+\textit{logfile}. %
+
+\item
+This procedure was then repeated for the next image. %
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Shifting %%%%%%%%%%%%%%%%%%%%
+
+\subsection{Image Shifting}
+\label{cha:IRAF:sec:Photometry:subsec:Imshift}
+
+The required shifting of the images in each grid was done
+interactively using two \iraf\ scripts. %
+
+\vspace{\myparskip}
+
+The first script displayed each image in the grid using
+\texttt{imexamine}. A reference star which is visible in each frame was
+chosen. The coordinates of the star in the first frame was obtained
+using \texttt{imexamine}: the image was displayed, the cross--hairs
+are placed on the star, and the coordinates were calculated using a
+centroid algorithm and written to a log file. This procedure was
+repeated for the remaining images. %
+
+\vspace{\myparskip}
+
+The second script used the recorded values to determine the shift for
+each image. Each frame was shifted, and a corresponding bad pixel map
+created, using commands similar to: \texttt{imshift}
+\textit{input=image.imh xshift = 27.06 yshift = 31.84
+output=image\_sft.imh}. %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DAOPHOT Options %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{DAOPHOT} Options}
+\label{cha:IRAF:sec:Photometry:subsec:DAOPHOTOptions}
+
+A PSF model generally consists of two components:
+\begin{inparaenum}[(i)]
+\item
+an analytic function which models the core of the stars, and
+\item 
+one or more look-up tables
+\end{inparaenum}
+. The tables list the residuals of the analytic fit to the remaining
+annuli of the stars, and are used to improve the fit of the annuli. The
+\textit{daopars} pset parameters decide the number of look-up tables
+and the type of analytical model selected. %
+
+\begin{description}
+
+\item[function] 
+
+The type of analytical model(s) to be employed for the PSF. Possible
+models are: Gaussian, Moffat, Lorentzian, or Gaussian core with
+Lorentzian wings. A value of \textit{auto} for this parameter causes
+\texttt{psf} to determine which model fits the data best (i.e., has
+the smallest $\Chi^{2}_{r}$ value). For our analysis, we chose a
+Gaussian function. %
+
+\item[varorder]
+
+Determines the number of the look-up table used. If
+\textit{varorder} is set to $-1$, no look-up table is
+used. This is useful for severely undersampled data. A
+\textit{varorder} of 0 results in a constant model, which creates
+only one look-up table. A variable model is created by
+selecting a \textit{varorder} of 1 or 2. These models construct
+three and six look-up tables, respectively. This parameter was
+set to 0 for our data. %
+
+\item[fitrad]
+
+% 1999summer.txt % 
+Determines the area where the analytical fit is applied. This
+should generally be set to the full-width at half-maximum (FWHM)
+of the selected model stars. We selected a \textit{fitrad} value
+of 3.2 pixels initially for the fainter stars, and then 4 for
+the bright stars.  %
+
+\item[psfrad] 
+
+Sets the area where the empirical fit is applied. The brightest star of
+interest was selected. \texttt{Imexamine} was run to determine at
+what radius from the the centre of this star the flux from the star
+was indistinguishable from the noise. The distance (8 pixels) from
+this point to the centre of the star was selected as the value for
+\textit{psfrad}. %
+
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DAOPHOT Procedure %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{DAOPHOT} Procedure}
+\label{cha:IRAF:sec:Photometry:subsec:DAOPHOT}
+
+The \texttt{DAOPHOT} parameters having been set to their correct
+values, a list of the stars of interest and their coordinates was
+created, either using \texttt{daofind} or \texttt{imexamine}. The
+commands then run to obtain the instrumental magnitudes
+of the selected stars were:%
+
+\begin{description}
+
+\item[phot]
+Performs automatic aperture photometry on each star. %
+
+\item[pstselect]
+Uses the output from \texttt{phot} to select possible PSF model
+stars. %
+
+\item[psf] 
+Allows the user to interactively choose suitable PSF model stars from
+the candidates, and to create a PSF model. (We generally selected 3 or
+4 model stars from a list of approximately 15.) %
+
+\item[nstar]
+Uses the PSF to fit the stars of interest, and check the accuracy of
+the model. %
+
+\item[substar]
+Subtracts the fitted stars from the original image. This image is then
+viewed to look for residuals left after the subtraction. %
+
+\item[allstar]
+Determines the magnitude of the selected stars. %
+
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectroscopy %%%%%%%%%%%%%%%%%%%%
+
+\section{Spectroscopy}
+\label{cha:IRAF:sec:Spectroscopy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Apall %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{Apall}}
+\label{cha:IRAF:sec:Spectroscopy:subsec:apall}
+
+This routine was used to extract the spectra from the raw
+images. \texttt{Apall} automatically distinguishes the spectrum of the
+star from the sky background and the noise, and traces the
+spectrum. The following parameters determine the extraction process: %
+
+\begin{description}
+
+\item[format]
+The format for the extracted spectra. The \textit{multispec} format
+was chosen for our spectra. %
+
+\item[references] 
+A list of images to select as aperture references. This parameter was set
+to the null string for the target spectra. For extracting an arc
+spectrum, it was set to the corresponding reference image name. %
+
+\item[interactive]
+Decides whether the task is run interactively or not. The target
+spectra were extracted interactively (\textit{interactive} =
+\textit{yes}), whereas the arc spectra were automatically extracted
+(\textit{no}). %
+
+\item[background]
+Determines what type of background to subtract. No background was
+subtracted from our spectra using \texttt{apall} (\textit{background} = \textit{none}), as we subtracted the background manually. %
+
+\item[saturation]
+The saturation level of the detector. %
+
+\item[readnoise]
+The read out noise of the detector -- this parameter was automatically
+read from the \textit{RDNOISE} field of the image headers. %
+
+\item[gain]
+The photon gain of the detector -- this was read by \texttt{IRAF} from
+the \textit{GAIN} header field. %
+
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Identify %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{Identify}}
+\label{cha:IRAF:sec:Spectroscopy:subsec:identify}
+
+\texttt{Identify} was used to display an arc spectrum and match the
+spectral features with their corresponding wavelengths. It then
+computed a pixel to wavelength conversion function. The parameters modified from their default values for our spectra were: %
+
+\begin{description}
+
+\item[coordlist]
+% j1655spectralog.doc pg.5 %
+Selects the coordinate list used to identify the arc lines. For our
+arcs, we chose the supplied \textit{linelists\$argon.dat}. %
+
+\item[units]
+The type of units to be used for the coordinates entered. Our data were
+given in \textit{microns}. %
+
+\item[fwidth]
+The full-width at zero of the features in the arc spectrum. We determined
+this value to be 8 pixels. %
+
+\item[function] 
+The function to be applied to fit the dispersion correction. We selected a
+cubic spline -- \textit{spline3}. %
+
+\item[order]
+The order of \textit{function}. Our spline had order 3. %
+
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Reidentify %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{Reidentify}}
+\label{cha:IRAF:sec:Spectroscopy:subsec:reidentify}
+
+Rather than using \texttt{identify} on each individual arc, the
+\texttt{reidentify} task was run in order to apply the previous
+identification of the spectral features in the original arc to
+identify the features in successive arcs. The identification process
+is modified by changing the following parameters: %
+
+\begin{description}
+
+\item[images]
+A list of the images to be reidentified. %
+
+\item[interactive]
+Decides whether the task is run interactively or not. %
+
+\item[shift]
+The shift to apply to the user-specified coordinates for the arc
+features. This was set to \textit{INDEF}, allowing \iraf\ to calculate
+any necessary shift. %
+
+\item[search] 
+When \textit{shift} is set to \textit{INDEF}, this value specifies how
+\iraf\ calculates the shift. This was set to \textit{INDEF}. \iraf\ therefore compared the line peaks in the spectra to determine the shift. %
+
+\item[coordlist]
+Again, the coordinate list \textit{linelists\$argon.dat} was selected. %
+
+\end{description}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Splot %%%%%%%%%%%%%%%%%%%%
+
+\subsection{\texttt{Splot}}
+\label{cha:IRAF:sec:Spectroscopy:subsec:splot}
+
+\texttt{Splot} can be used to extract various properties
+interactively from a spectrum. Either a single spectrum, or a
+group of spectra can be examined. \texttt{Splot} was used in the
+following ways with our spectra: %
+
+\begin{itemize}
+
+\item
+Having obtained a combined spectrum of our target \groj, we smoothed
+this spectrum using the ``\texttt{s}'' cursor
+command. This implemented a boxcar smooth. %
+
+\item
+We measured the equivalent width of a spectral feature as
+follows. First, we viewed the spectrum using \texttt{splot} and
+expanded the view of the spectrum to the area around the spectral
+line (``\texttt{a}'' command). We then indicated the position of the
+feature using the ``\texttt{e}'' command, which then displayed the
+wavelength of the feature and the equivalent width. We loaded the next
+spectrum by typing ``\texttt{g}'', and repeated the procedure. %
+
+\item
+The masking of a spectral feature was performed using the
+``\texttt{j}'' command. The view of the spectrum was zoomed into the
+spectral feature, and the flux value was set to the continuum
+value. This new spectrum was then saved by typing ``\texttt{i}''. 
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Chapter %%%%%%%%%%%%%%%%%%%%
