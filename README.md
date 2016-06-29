@@ -29,11 +29,11 @@ Please cite using the following BibTex entry:
 
 ---
 
-We present ![equation](http://bit.ly/296m0Gj)– and J–band photometry
+We present ![k_s](images/k_s.png)– and J–band photometry
 of GRO J1655–40 during two epochs of observation, and determine the
 dereddened and absolute magnitudes of this star system. We derive a
 range of spectral types (F0–G2 III–IV) for the secondary star in GRO
-J1655–40, using our ![equation](http://bit.ly/29fDePZ) colour estimate
+J1655–40, using our ![j_0-k_0](images/j_0-k_0.png) colour estimate
 for this soft X–ray transient. We find the absolute magnitude of GRO
 J1655–40 to be similar to that of another long period soft X–ray
 transient.
@@ -47,17 +47,18 @@ the light curve of this stellar system, and place real bounds on the
 mass of the primary star in GRO J1655–40. GRO J1655–40 is also shown
 to have a similar spectrum to that of an F5–F7 III–IV star.
 
-The ellipsoidal modulation observed in the ![equation](http://bit.ly/296m0Gj)–band 
-is modelled using ELC, to obtain an inclination of ![equation](http://bit.ly/29fE9jA) and a mass ratio of
-2.5–6 for the system. These values concur with past results. The
-derived primary mass, ![equation](http://bit.ly/29fEKla), suggests that the
+The ellipsoidal modulation observed in the ![k_s](images/k_s.png)–band
+is modelled using ELC, to obtain an inclination of
+![64_deg-70_deg](images/64_deg-70_deg.png) and a mass ratio of 2.5–6
+for the system. These values concur with past results. The derived
+primary mass, ![m_x](images/m_x.png), suggests that the
 compact object in GRO J1655–40 is a black hole.
 
 An attempt is made to model the system in outburst, taking the
 ellipsoidal variability of the secondary star and the eclipse of a
 bright accretion disk into account. The resultant fit is poor, a
 consequence of the asymmetries of the disk and flickering in the
-![equation](http://bit.ly/296m0Gj)–band. The outburst light curve of GRO J1655–40 
+![k_s](images/k_s.png)–band. The outburst light curve of GRO J1655–40 
 is shown to display an eclipse of the accretion disk,
 consistent with the high inclination of the system.
 
