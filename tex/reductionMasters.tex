@@ -95,13 +95,13 @@ R_V = \frac{A_V}{E_{B-V}} \sim 3.1.
 To correct for interstellar extinction at a given wavelength, we can use the results of \citeN{CardelliClaytonMathis:1989}, who derived the following values for the ratios between the interstellar
 extinction in the $K$--band ($A_K$) and the $J$--band ($A_J$), and that
 in the $V$--band ($A_V$):
-\begin{eqnarray} 
+\begin{eqnarray}
 \label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction:eqn:CardelliA}
 \frac{A_K}{A_V} = 0.114,\\\nonumber
 \frac{A_J}{A_V} = 0.282.
 \end{eqnarray}
 We can therefore determine an expression for, say, $A_K$, as follows:
-\begin{eqnarray} 
+\begin{eqnarray}
 \label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinctioneqn:CardelliAK}
 A_K & = & 0.114 \times A_V, \\\nonumber
     & = & 0.114 \times R_V \times E_{B-V},
@@ -208,7 +208,7 @@ feature (Carroll \& Ostlie 1996). }%
 \label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity}
 
 We used spectroscopy in order to verify that the disk in our target system was not contaminating the light curve of the binary. We also measured the \textbf{radial velocity} of the secondary star, so as to confirm that our spectra were consistent with past observations. This was especially necessary as these were the first high signal-to-noise $K$--band spectra of a black hole X--ray
-transient system. 
+transient system.
 
 \vspace{\myparskip}
 
@@ -219,7 +219,7 @@ binary system may be calculated from:
 v_r = \gamma + K_2 \sin{(2\pi\phi)},
 \end{eqnarray}
 where $\gamma$ is the systematic velocity of the binary system, and
-$\phi$ is the orbital phase of the binary.  
+$\phi$ is the orbital phase of the binary.
 
 \vspace{\myparskip}
 
@@ -228,8 +228,8 @@ Doppler shift of the observed wavelengths of the spectral features
 in the spectrum of the star, which is a result of the motion of the star relative to the observer along their line of sight. This shift is given by:%
 \begin{eqnarray}
 \label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:shift}
-\Delta\lambda 	& = & \lambda_{\mathrm{obs}} - \lambda,\\
-       		& = & \frac{v_r \lambda}{c},
+\Delta\lambda     & = & \lambda_{\mathrm{obs}} - \lambda,\\
+               & = & \frac{v_r \lambda}{c},
 \end{eqnarray}
 where $\lambda$ and $\lambda_{\mathrm{obs}}$ are the rest and
 observed wavelengths, respectively, of the spectral
@@ -279,8 +279,8 @@ Although the quiescent infrared disk contribution is often
 assumed be negligible (see, for example, %
 \citeNP{ShahbazNaylorCharles:1994}%
 ), it is possible that the disk can in fact be a
-strong source of infrared radiation. 
-Infrared spectroscopy can be used to constrain the level of 
+strong source of infrared radiation.
+Infrared spectroscopy can be used to constrain the level of
 accretion disk contamination in the infrared during
 quiescence. %
 
@@ -352,7 +352,7 @@ several comparison stars in each processed image. The images are
 calibrated to obtain the apparent magnitudes of the chosen stars in
 the sky. Finally, the absolute magnitude of the target star is
 calculated, taking its distance and interstellar extinction into
-account. 
+account.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% IRAF and DS9 %%%%%%%%%%%%%%%%%%%%
@@ -370,7 +370,7 @@ values are written using the \textit{italic} font. %
 \vspace{\myparskip}
 
 Occasionally throughout the reduction and analysis, it is necessary
-to view and interact with the images. Our image viewer is 
+to view and interact with the images. Our image viewer is
 \textbf{SAOIMAGE DS9} (v 2.1b4), written by the Smithsonian
 Astrophysical Observatory Research and Development Group. %
 
@@ -435,7 +435,7 @@ Having subtracted the background image, we then take into
 account the intrinsic
 pixel to pixel variations for the observed wavelengths. To do this, a
 \textbf{flatfield image}, which represents this variability, is
-created using one of the 
+created using one of the
 following methods. %
 
 \vspace{\myparskip}
@@ -480,7 +480,7 @@ flatfielded images. This is done automatically by creating a
 \vspace{\myparskip}
 
 Firstly, the raw images are median combined and the resultant image
-divided by its overall median pixel value, in a similar manner to the 
+divided by its overall median pixel value, in a similar manner to the
 median combined flatfield method discussed above. Secondly, the value of each pixel in the divided image is written to a text file using the \texttt{listpixel} command. Since the average
 value of a pixel in the divided image should have been approximately
 1, the pixels that registered a value of below 0.75 or above 1.25 are
@@ -522,7 +522,7 @@ the purposes of studying the variability of systems like \groj,
 we need only the brightness of the system relative to a star of
 constant brightness. Nevertheless, in order to compare our
 observations with previous ones, we also require a calibrated measure
-of the brightness of the system. % 
+of the brightness of the system. %
 
 \vspace{\myparskip}
 
@@ -548,7 +548,7 @@ Firstly, we select a constant star (which we denote as our \textbf{comparison st
 interest. Secondly, \texttt{DAOPHOT} is run to remove near neighbours of the selected
 stars. Several isolated faint stars in the field of view are chosen
 as model stars, and are used by \texttt{DAOPHOT} to create a
-\textbf{point spread function (PSF)} model. 
+\textbf{point spread function (PSF)} model.
 This PSF model is then fitted to all our stars of interest and the instrumental magnitudes are obtained from \texttt{allstar}. The magnitudes of the reference stars are averaged, and this value
 subtracted from the magnitude of the target star and the comparison star.  The
 Julian Date of each observation is determined from the Universal Date
@@ -563,7 +563,7 @@ variable star, we obtain the \textbf{phase averaged relative
 magnitude}:%
 \label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry:topic:parm}%
 \ we average the values for the magnitude of our target star
-relative to one particular reference star. 
+relative to one particular reference star.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aperture Photometry and Photometric Calibration %%%%%%%%%%%%%%%%%%%%
 
@@ -578,11 +578,11 @@ star using \textbf{aperture photometry}, and then calculating the apparent magni
 \vspace{\myparskip}
 
 First, we obtain the counts per second ($f_{10}$) detected by our
-telescope from a star of known magnitude, say magnitude 10. We then 
-\begin{inparaenum}[(i)] 
+telescope from a star of known magnitude, say magnitude 10. We then
+\begin{inparaenum}[(i)]
 \item determine the number of counts per second measured from this comparison star,
 \item correcte this for atmospheric extinction, and
-\item comparee this to $f_{10}$, to obtain the apparent magnitude of the comparison star. 
+\item comparee this to $f_{10}$, to obtain the apparent magnitude of the comparison star.
 \end{inparaenum}
 
 \vspace{\myparskip}
@@ -605,16 +605,16 @@ extinction (see \S~%
 If we know the value of $E_{B-V}$, we can calculate the $K$--band extinction from Equation~%
 \vref{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinctioneqn:CardelliAK}%
 : %
-\begin{eqnarray} 
+\begin{eqnarray}
 \label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:CardelliAK}
 A_{K}    & = & 0.114 \times R_V \times E_{B-V}, \nonumber
-\end{eqnarray} 
+\end{eqnarray}
 and similarly for the $J$--band extinction. Then, the dereddened
 magnitude ($K_{0}$) of our target star in the $K$--band can be found via:
-\begin{eqnarray} 
+\begin{eqnarray}
 \label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:K0}
 K_0 & = & \mathrm{apparent\ } K_{s} \mathrm{\ magnitude} - A_K,
-\end{eqnarray} 
+\end{eqnarray}
 and similarly for the $J$--band. %
 
 \vspace{\myparskip}
@@ -632,10 +632,10 @@ calculated using Equations~%
 \label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData}
 
 Just as we need to correct our photometric data for the background and
-detector pixel variations, we need to process our spectra to 
-\begin{inparaenum}[(i)] 
+detector pixel variations, we need to process our spectra to
+\begin{inparaenum}[(i)]
 \item account for the background,
-\item apply a dispersion correction, and 
+\item apply a dispersion correction, and
 \item remove telluric features.
 \end{inparaenum}
 The corrected spectra can then be averaged to obtain our final target spectrum. %
@@ -739,4 +739,3 @@ this transient. We will then apply the data reduction techniques we have outline
 system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Chapter %%%%%%%%%%%%%%%%%%%%
-

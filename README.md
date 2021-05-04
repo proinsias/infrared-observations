@@ -1,16 +1,14 @@
-Infrared Observations of GRO J1655–40: Constraints on the Black Hole Mass
-============================
+# Infrared Observations of GRO J1655–40: Constraints on the Black Hole Mass
 
 MSc dissertation, Francis T. O'Donovan, October 2003.
 
-<!-- 
-_arXiv:_ http://arxiv.org/abs/1407.7502
--->
+_Source:_ <http://library.ucc.ie/record=b1373041>
 
-_Mirrors:_ 
-- <http://library.ucc.ie/record=b1373041>
+_Mirrors:_
 
-_Contact:_ Francis T. O'Donovan ([@francisodonovan](https://twitter.com/francisodonovan/), <francis.odonovan@gmail.com>)
+- https://github.com/proinsias/infrared-observations/blob/master/pdf/mastersThesis.pdf
+
+_Contact:_ Check out my [webpage](https://proinsias.github.io/about/) for contact details.
 
 Please cite using the following BibTex entry:
 
@@ -23,11 +21,12 @@ Please cite using the following BibTex entry:
   month=10,
 }
 ```
-<!--
-  note={arXiv:1407.7502} 
--->
 
----
+[![Cron Jobs](https://github.com/proinsias/infrared-observations/workflows/Cron%20Jobs/badge.svg)](https://github.com/proinsias/infrared-observations/actions/workflows/cronjobs.yml)
+[![Pull Requests & Pushes](https://github.com/proinsias/infrared-observations/workflows/Pull%20Requests%20%26%20Pushes/badge.svg)](https://github.com/proinsias/infrared-observations/actions/workflows/pull-requests-and-pushes.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
+______________________________________________________________________
 
 We present ![k_s](images/k_s.png)– and J–band photometry
 of GRO J1655–40 during two epochs of observation, and determine the
@@ -58,14 +57,12 @@ An attempt is made to model the system in outburst, taking the
 ellipsoidal variability of the secondary star and the eclipse of a
 bright accretion disk into account. The resultant fit is poor, a
 consequence of the asymmetries of the disk and flickering in the
-![k_s](images/k_s.png)–band. The outburst light curve of GRO J1655–40 
+![k_s](images/k_s.png)–band. The outburst light curve of GRO J1655–40
 is shown to display an eclipse of the accretion disk,
 consistent with the high inclination of the system.
 
----
+______________________________________________________________________
 
 Many thanks to [@glouppe](https://twitter.com/glouppe/) for
 inspiration and README template from his
 [thesis](https://github.com/glouppe/phd-thesis).
-
-

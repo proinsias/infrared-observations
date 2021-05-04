@@ -15,16 +15,16 @@
 % For time printing
 \newcounter{hours}\newcounter{minutes}
 
-\usepackage{latexsym}	% Symbol environment
-\usepackage{ifthen}	% For operating system switches
-\usepackage{calc}	% For time printing
-\usepackage{varioref}	% For page-sensitive references
-\usepackage{graphicx}	% For graphics
-\usepackage{url}	% For urls
-\usepackage{paralist}	% For different types of lists
-\usepackage{astrobib}	% For aa style 
-\usepackage{fixfoot}	% For multiple references to same footnote
-\usepackage{xspace}	% To prevent problems with missing spaces
+\usepackage{latexsym}    % Symbol environment
+\usepackage{ifthen}    % For operating system switches
+\usepackage{calc}    % For time printing
+\usepackage{varioref}    % For page-sensitive references
+\usepackage{graphicx}    % For graphics
+\usepackage{url}    % For urls
+\usepackage{paralist}    % For different types of lists
+\usepackage{astrobib}    % For aa style
+\usepackage{fixfoot}    % For multiple references to same footnote
+\usepackage{xspace}    % To prevent problems with missing spaces
 
 % Switch for operating system - 0 (Linux), 1 (Mac).
 \newcounter{OS}
@@ -58,11 +58,10 @@
 %
 % From LaTeX Companion
 \newcommand{\Printtime}{\setcounter{hours}{\time/60}%
-	\setcounter{minutes}{\time-\value{hours}*60}%
-	\ifthenelse{\value{hours}<10}{0}{}\thehours:%
-	\ifthenelse{\value{minutes}<10}{0}{}\theminutes}
+    \setcounter{minutes}{\time-\value{hours}*60}%
+    \ifthenelse{\value{hours}<10}{0}{}\thehours:%
+    \ifthenelse{\value{minutes}<10}{0}{}\theminutes}
 
 % From TeX FAQs
 % Thick lines in tables
 \setlength{\doublerulesep}{\arrayrulewidth}
-
