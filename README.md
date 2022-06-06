@@ -26,7 +26,7 @@ Please cite using the following BibTex entry:
 [![Pull Requests & Pushes](https://github.com/proinsias/infrared-observations/workflows/Pull%20Requests%20%26%20Pushes/badge.svg)](https://github.com/proinsias/infrared-observations/actions/workflows/pull-requests-and-pushes.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-______________________________________________________________________
+---
 
 We present ![k_s](images/k_s.png)– and J–band photometry
 of GRO J1655–40 during two epochs of observation, and determine the
@@ -40,7 +40,7 @@ transient.
 The first high signal–to–noise K–band spectrum of a black hole X–ray
 transient system (GRO J1655–40) is presented. This is used to show
 that the quiescent contribution of the accretion disk in GRO J1655–40
-to the total flux of the system in the *K*–band is negligible. We are
+to the total flux of the system in the _K_–band is negligible. We are
 therefore able to measure with certainty the binary inclination from
 the light curve of this stellar system, and place real bounds on the
 mass of the primary star in GRO J1655–40. GRO J1655–40 is also shown
@@ -61,7 +61,7 @@ consequence of the asymmetries of the disk and flickering in the
 is shown to display an eclipse of the accretion disk,
 consistent with the high inclination of the system.
 
-______________________________________________________________________
+---
 
 Many thanks to [@glouppe](https://twitter.com/glouppe/) for
 inspiration and README template from his
