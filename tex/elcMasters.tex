@@ -3,7 +3,7 @@
 
 \chapter{The Eclipsing Light Curve Code}\label{cha:ELC}
 
-Having obtained the light curve of \groj, we attempted to model the data through numerical simulations of the X--ray binary. Here we outline the components of the model, and discuss the values obtained for the mass ratio and inclination.
+Having obtained the light curve of \groj, we attempted to model the data through numerical simulations of the X-ray binary. Here we outline the components of the model, and discuss the values obtained for the mass ratio and inclination.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction to ELC %%%%%%%%%%%%%%%%%%%%
 
@@ -31,11 +31,11 @@ The \textit{ELC} programs can model the light curve of:
 
 
 \item
-\textbf{a binary star system}: for example, an X--ray binary, where the
+\textbf{a binary star system}: for example, an X-ray binary, where the
 companion star is denoted by star 1 and the compact star by star 2. %
 
 \item
-\textbf{a binary system with an accretion disk}, such as an X--ray binary with
+\textbf{a binary system with an accretion disk}, such as an X-ray binary with
 a disk around the compact object (star 2). %
 
 \end{itemize}
@@ -59,7 +59,7 @@ font: \texttt{ELC}). }%
 based on a list of system parameters. %
 
 \item \mbox{\texttt{gridELC}}, an optimizer based on the ``grid search''
-routine \cite{Bevington:1969}. Given a series of folded light curves and radial velocity curves,
+routine~\cite{Bevington:1969}. Given a series of folded light curves and radial velocity curves,
 \mbox{\texttt{gridELC}} will adjust user-specified parameters to find the
 minimum $\Chi^2$ of the fit of the \textit{ELC} model to the data. The
 final set of parameters are then used to create light curve models
@@ -85,10 +85,10 @@ We utilised these \textit{ELC} programs to model both the 1998 and
 The quiescent observations of \groj\ were modelled by accounting only
 for the ellipsoidal variability of the secondary star. The disk contribution to
 the overall flux of the system was assumed to be negligible (we will later show this to
-be a valid assumption -- see \S~%
+be a valid assumption --- see \S~%
 \vref{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution}%
 ), and hence we assumed there would be no noticeable eclipse of the
-accretion disk. It was also assumed that there was no X--ray heating of
+accretion disk. It was also assumed that there was no X-ray heating of
 the secondary star. The model we employed was of a binary system
 with a Roche lobe filling secondary star and a black hole primary
 star. %
@@ -123,12 +123,12 @@ Figure~%
 
 
 \DeclareFixedFootnote{\beerstellar}{Corresponding to a star of spectral type
-F5--G0 III--IV (Beer \& Podsiadlowski 2001).} % For fixed footnote
+F5--G0 III-IV (Beer \& Podsiadlowski 2001).} % For fixed footnote
 \DeclareFixedFootnote{\pringle}{This close binary should have synchronously rotating components in a circular orbit.} % For fixed footnote %(Pringle 1985)
 \DeclareFixedFootnote{\ob97}{Orosz \& Bailyn (1997).} % For fixed footnote
 \DeclareFixedFootnote{\vdh98}{van~der~Hooft et~al.\ (1998).} % For fixed footnote
 \DeclareFixedFootnote{\shah}{Shahbaz et~al.\ (1999).} % For fixed footnote
-\DeclareFixedFootnote{\beer}{Beer \& Podsiadlowski (2001) -- these values were only initially fixed.} % For fixed footnote
+\DeclareFixedFootnote{\beer}{Beer \& Podsiadlowski (2001) --- these values were only initially fixed.} % For fixed footnote
 \DeclareFixedFootnote{\bh}{\textit{ELC} interprets this to mean that the primary star is an invisible black hole.} % For fixed footnote
 
 \begin{center}
@@ -136,16 +136,16 @@ F5--G0 III--IV (Beer \& Podsiadlowski 2001).} % For fixed footnote
 
 \hline
 Name        & Description                & Value \\\hline\hline\hline\hline
-Q        & Mass ratio                 & 3.9\beer \\\hline
-finc        & Inclination                 & $68\fdg65$\beer \\\hline
-Tgrav1      & Gravity Darkening exponent, star 1    & 0.25\vdh98 \\\hline
-Period        & Orbital period of binary            & 2 \fd 62168\vdh98 \\\hline
+Q        & Mass ratio                 & 3.9\beer\ \\\hline
+finc        & Inclination                 & $68\fdg65$\beer\ \\\hline
+Tgrav1      & Gravity Darkening exponent, star 1    & 0.25\vdh98\ \\\hline
+Period        & Orbital period of binary            & 2 \fd\ 62168\vdh98 \\\hline
 betarim        & Angle of disk to orbital plane     & $\sim 2\degr$\ob97  \\\hline
 alb1        & Bolometric albedo, star 1        & 0.5\ob97\\\hline
-fm        & Mass function, star 2            & 2.73\,M\ensuremath{_{\odot}}\shah \\\hline
-separ        & Orbital separation            & $\sim16$\,R\ensuremath{_{\odot}}\shah \\\hline
-Teff1        & Mean temperature, star 1        & $\sim6400$\,K\beerstellar \\\hline
-Teff2        & Mean temperature, star 2        & $<0$\,K\bh \\\hline
+fm        & Mass function, star 2            & 2.73\,M\ensuremath{_{\odot}}\shah\ \\\hline
+separ        & Orbital separation            & $\sim16$\,R\ensuremath{_{\odot}}\shah\ \\\hline
+Teff1        & Mean temperature, star 1        & $\sim6400$\,K\beerstellar\ \\\hline
+Teff2        & Mean temperature, star 2        & $<0$\,K\bh\ \\\hline
 fill1        & Roche lobe filling factor, star 1     & 1.000%
 \footnote{\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:mass}%
 Since accretion continues in quiescence (see \S~\vref{cha:Introduction:sec:X--rayBinaries:subsec:Quiescence}). }%
@@ -154,9 +154,9 @@ fill2        & Roche lobe filling factor, star 2    & 0.000%
 \footnote{\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:bh}
 Primary star is a black hole.}%
 \\\hline
-eccen        & Eccentricity of orbit            & 0\pringle \\\hline
-omega1        & Ratio of rotational to orbital frequency, star 1 & 1\pringle \\\hline
-omega2        & Ratio of rotational to orbital frequency, star 2 & 1\pringle \\\hline
+eccen        & Eccentricity of orbit            & 0\pringle\ \\\hline
+omega1        & Ratio of rotational to orbital frequency, star 1 & 1\pringle\ \\\hline
+omega2        & Ratio of rotational to orbital frequency, star 2 & 1\pringle\ \\\hline
 
 \hline
 
@@ -208,7 +208,7 @@ were set from experience. %
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
 \DeclareFixedFootnote{\nodisk}{No disk present.} % For fixed footnote
-\DeclareFixedFootnote{\nolx}{No X--ray heating.} % For fixed footnote
+\DeclareFixedFootnote{\nolx}{No X-ray heating.} % For fixed footnote
 \DeclareFixedFootnote{\noeclipse}{No eclipses.} % For fixed footnote
 
 \begin{center}
@@ -216,16 +216,16 @@ were set from experience. %
 
 \hline
 Name        & Description &    Value \\\hline\hline\hline\hline
-iecheck & Switch for eclipses & -1\noeclipse  \\\hline
-idint & Switch for disk       & 0\nodisk \\\hline
-rinner        & Inner radius of disk  & --\nodisk \\\hline
-router        & Outer radius of disk    & --\nodisk \\\hline
+iecheck & Switch for eclipses & -1\noeclipse\  \\\hline
+idint & Switch for disk       & 0\nodisk\ \\\hline
+rinner        & Inner radius of disk  & --\nodisk\ \\\hline
+router        & Outer radius of disk    & --\nodisk\ \\\hline
 xi        & Power-law exponent on the disk temperature profile &
---\nodisk \\\hline
-tdisk        & Temperature of inner disk & --\nodisk \\\hline
-Nref        & Number of iterations for reflection effect & 0\nolx \\\hline
-Lx        & $\log_{10}{L_{X}}$ for primary star in X--ray binary
-& 0\nolx \\\hline
+--\nodisk\ \\\hline
+tdisk        & Temperature of inner disk & --\nodisk\ \\\hline
+Nref        & Number of iterations for reflection effect & 0\nolx\ \\\hline
+Lx        & $\log_{10}{L_{X}}$ for primary star in X-ray binary
+& 0\nolx\ \\\hline
 
 \hline
 
@@ -235,7 +235,7 @@ Lx        & $\log_{10}{L_{X}}$ for primary star in X--ray binary
 \end{table}
 
 \item
-Since this model ignored X--ray heating and the accretion disk, the
+Since this model ignored X-ray heating and the accretion disk, the
 parameters in Table~%
 \vref{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:VarELCParms} %
 were set to the appropriate values. %
@@ -318,7 +318,7 @@ secondary, with the expected deeper minimum at phase 0.5. %
 \includegraphics[width=5.0in]{contourPlot2}
 \caption{%
 The $\chi^2$ contour plot for the 1998 $K_{s}$--band data. This plot displays the 68\%, 90\% and
- 99\% confidence levels from the \texttt{ELC} fits, together with constraint curves derived from the mass function assuming a secondary mass of 1\,M\sun and 3\,M\sun, respectively. (The minimum reduced $\chi^2$ has been set equal to 1.) %
+ 99\% confidence levels from the \texttt{ELC} fits, together with constraint curves derived from the mass function assuming a secondary mass of 1\,M\sun\ and 3\,M\sun, respectively. (The minimum reduced $\chi^2$ has been set equal to 1.) %
 }\label{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2}
 \end{center}
 \end{figure}
@@ -329,8 +329,12 @@ In order to properly constrain the mass ratio and the inclination, \texttt{gridE
 \vref{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2}%
 \ shows the resultant plot, together with constraints for $i$ and $q$
 derived from the mass function and secondary mass considerations,
-assuming (conservatively) that the mass of the secondary lies between 1\,M\sun and
-3\,M\sun -- it is an F/G (sub)giant. The area in Figure~\ref{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2} where the mass function and ellipsoidal modelling constraints overlap denotes the allowed values of $q$ and $i$. Generally, our results show that the inclination of the system lies in the range $i=64\degr$--$70\degr$, and that the mass ratio lies in the range $q=2.5$--$6$, at the 90\% confidence level. %
+assuming (conservatively) that the mass of the secondary lies between 1\,M\sun\ and
+3\,M\sun\ --- it is an F/G (sub)giant.% chktex 36
+The area in Figure~\ref{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2}
+where the mass function and ellipsoidal modelling constraints overlap denotes the allowed values of $q$ and $i$.
+Generally, our results show that the inclination of the system lies in the range $i=64\degr$--$70\degr$,
+and that the mass ratio lies in the range $q=2.5$--$6$, at the 90\% confidence level. %
 
 \vspace{\myparskip}
 
@@ -355,7 +359,7 @@ Our 1998 $K_s$--band Data     & $2.5-6$     & $64\degr-70\degr$
 \\\hline
 \citeN{BeerPodsiadlowski:2001} (Predicted) & $3.9\pm0.6$    & $68\fdg65\pm1\fdg5$ \\\hline
 \citeN{GreeneBailynOrosz:2001}    & $2.6\pm0.3$    & $70\fdg2\pm1\fdg9$ \\\hline
-\citeN{Shahbaz_et_al.:1999}    & 2.29--2.97 & -- \\\hline
+\citeN{Shahbaz_et_al.:1999}    & 2.29--2.97 & --- \\\hline
 van~der~Hooft et~al.\ \citeyear{VanDerHooft_et_al.:1998}    & 2.43--4.20     & $63\fdg7$--$70\fdg7$\\\hline
 \citeN{OroszBailyn:1997}    & $2.99\pm0.08$    & $69\fdg50\pm0\fdg08$ \\\hline
 
@@ -373,7 +377,7 @@ van~der~Hooft et~al.\ \citeyear{VanDerHooft_et_al.:1998}    & 2.43--4.20     & $
 
 Using our values for $q$ from the 1998 data ($q=2.5$--$6$) and the
 corresponding secondary masses ($M_{2}=1$--$3$\,M\sun), we derived the
-mass of the primary as $6.8\pm0.7$\,M\sun. This is to be compared in particular with the results from the only other infrared study of this system, which yielded $M_{X}=6.3\pm0.5$\,M\sun \cite{GreeneBailynOrosz:2001}. Table~%
+mass of the primary as $6.8\pm0.7$\,M\sun. This is to be compared in particular with the results from the only other infrared study of this system, which yielded $M_{X}=6.3\pm0.5$\,M\sun\~\cite{GreeneBailynOrosz:2001}. Table~%
 \vref{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedm:tab:ComparisonOfResults}%
 \ compares this mass with masses from earlier studies. %
 
@@ -439,21 +443,21 @@ eclipses of the accretion disk and the secondary.
 \DeclareFixedFootnote{\steady}{Assuming a steady-state disk.} % For fixed footnote
 \DeclareFixedFootnote{\diskp}{Accretion disk present.} % For fixed footnote
 \DeclareFixedFootnote{\eclipse}{Check for eclipses.} % For fixed footnote
-\DeclareFixedFootnote{\nolx}{No X--ray heating.} % For fixed footnote
+\DeclareFixedFootnote{\nolx}{No X-ray heating.} % For fixed footnote
 
 \begin{center}
 \begin{tabular}{|l||||l|}
 
 \hline
 Name        & Value \\\hline\hline\hline\hline
-iecheck     & 0\eclipse\\\hline
-idint         & 1\diskp \\\hline
+iecheck     & 0\eclipse\ \\\hline
+idint         & 1\diskp\ \\\hline
 rinner        & 0.55   \\\hline
 router        & 1.0      \\\hline
-xi        & $-0.8$\steady \\\hline
+xi        & $-0.8$\steady\ \\\hline
 tdisk        & $\sim 13000$\,K \\\hline
-Nref        & 0\nolx \\\hline
-Lx        & 0\nolx \\\hline
+Nref        & 0\nolx\ \\\hline
+Lx        & 0\nolx\ \\\hline
 
 \hline
 
@@ -470,7 +474,7 @@ differences:
 
 \item
 The variable parameters were set as to include an accretion disk and
-eclipses -- see Table~%
+eclipses --- see Table~%
 \vref{cha:ELC:sec:1995Results:subsec:ModellingProcedure:tab:paramvalues}%
 . %
 
@@ -530,7 +534,7 @@ explanation for this is that the accretion disk is significantly
 non-axisymmetric, or exhibits infrared flaring or flickering activity, which the code is unable to account for. %
 \citeN{OroszBailyn:1997}%
 \ were also unable to accurately model their optical outburst data, taken
-during August 1994 and March--April 1995, and obtained larger reduced
+during August 1994 and March-April 1995, and obtained larger reduced
 $\Chi^2$ values from modelling their outburst data than from their quiescent data. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Amplitude of Variability %%%%%%%%%%%%%%%%%%%%
