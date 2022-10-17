@@ -1,12 +1,12 @@
 %   A flag and the \newif definition we will need to use it:
 %               \Draft gives draft output
 %               \Final gives final output
-\newif\ifDraft
+\newif\ifDraft\
 \def\Draft{\Drafttrue}
 \def\Final{\Draftfalse}
-\Final % Uncomment this for final output
+\Final\ % Uncomment this for final output
 %\Draft % Uncomment this for draft output
-\ifDraft
+\ifDraft\
 \documentclass[12pt,draft,a4paper]{report}
 \else
 \documentclass[12pt,a4paper]{report}
