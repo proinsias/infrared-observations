@@ -6,13 +6,13 @@ _Source:_ <http://library.ucc.ie/record=b1373041>
 
 _Mirrors:_
 
-- https://github.com/proinsias/infrared-observations/blob/master/pdf/mastersThesis.pdf
+-   <https://github.com/proinsias/infrared-observations/blob/master/pdf/mastersThesis.pdf>
 
 _Contact:_ Check out my [webpage](https://proinsias.github.io/about/) for contact details.
 
 Please cite using the following BibTex entry:
 
-```
+```bibtex
 @mastersthesis{odonovan2003infraredobs,
   title={Infrared Observations of GRO J1655–40: Constraints on the Black Hole Mass},
   author={{O'Donovan}, F.~T.},
