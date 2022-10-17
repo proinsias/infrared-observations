@@ -1,14 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Infrared Data Reduction Techniques %%%%%%%%%%%%%%%%%%%%
 
-\chapter{Infrared Astronomy and Data Reduction Techniques}
-\label{cha:InfraredDataReductionTechniques}
+\chapter{Infrared Astronomy and Data Reduction Techniques}\label{cha:InfraredDataReductionTechniques}
 
 In this chapter, we introduce both photometry and spectroscopy and explore the data reduction techniques we employed to process our observations of a target system. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Magnitude Scale %%%%%%%%%%%%%%%%%%%%
 
-\section{Photometry and the Magnitude Scale}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale}
+\section{Photometry and the Magnitude Scale}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale}
 
 Part of this thesis is concerned with determining and modelling the
 variation in brightness of our observations of our target system. The brightness of this system is measured by a technique known as \textbf{photometry}, %
@@ -26,8 +24,7 @@ small range of wavelengths, known as a%
 electromagnetic spectrum. The bands we selected for the observations in this thesis were the $J$--
 (1.06--1.44$\,\mu \mathrm{m}$), $K$-- (1.96--2.44$\,\mu \mathrm{m}$) and
 $K_s$-- (1.99--2.31$\,\mu\mathrm{m}$)%
-\footnote{%
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:Photometry:foot:Ks}
+\footnote{\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:Photometry:foot:Ks}
 The $K_s$ (``$K$ short'') filter is a modified K filter
 that reduces the thermal background for warm ground-based
 telescopes, as the background at these wavelengths can be significant.}%
@@ -40,8 +37,7 @@ The magnitude of the binary measured by the detector is known as the \textbf{ins
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Atmospheric Extinction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Atmospheric Extinction}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AtmosphericExtinction}
+\subsection{Atmospheric Extinction}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AtmosphericExtinction}
 
 When a star is observed through the atmosphere, the star is obscured
 due to the absorption and scattering of the starlight by the
@@ -51,8 +47,7 @@ atmosphere, a phenomenon known as \textbf{atmospheric extinction}. %
 
 The amount of extinction for a certain wavelength is known as the \textbf{(atmospheric) extinction} %
 for that wavelength, and is given by the product of the
-\textbf{airmass ($\Chi$)} %
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AtmosphericExtinction:topic:k}
+\textbf{airmass ($\Chi$)}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AtmosphericExtinction:topic:k}
 and the \textbf{extinction coefficient ($k$)}.%
 \ The airmass is approximately the inverse cosine of the zenith angle of
 the telescope, and the extinction coefficient is the number of
@@ -67,8 +62,7 @@ of our target star. This magnitude can be compared to other observations, assumi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Interstellar Extinction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Interstellar Extinction}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction}
+\subsection{Interstellar Extinction}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction}
 
 We must also consider the absorption and scattering of starlight due to the
 dense dust clouds which lie between the Earth and the star. This is
@@ -83,8 +77,7 @@ We can then define two quantities: the \textbf{reddening
 (390--490 nm) passband and $V$ is the visible (500--600 nm) passband,
 and the \textbf{extinction ratio, $R_V$}, which is the ratio of the visible extinction to the reddening.
 This ratio varies, but is usually approximated as
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction:eqn:rv}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction:eqn:rv}
 R_V = \frac{A_V}{E_{B-V}} \sim 3.1.
 \end{eqnarray}
 (See, for example, %
@@ -95,14 +88,12 @@ R_V = \frac{A_V}{E_{B-V}} \sim 3.1.
 To correct for interstellar extinction at a given wavelength, we can use the results of \citeN{CardelliClaytonMathis:1989}, who derived the following values for the ratios between the interstellar
 extinction in the $K$--band ($A_K$) and the $J$--band ($A_J$), and that
 in the $V$--band ($A_V$):
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction:eqn:CardelliA}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinction:eqn:CardelliA}
 \frac{A_K}{A_V} = 0.114,\\\nonumber
 \frac{A_J}{A_V} = 0.282.
 \end{eqnarray}
 We can therefore determine an expression for, say, $A_K$, as follows:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinctioneqn:CardelliAK}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinctioneqn:CardelliAK}
 A_K & = & 0.114 \times A_V, \\\nonumber
     & = & 0.114 \times R_V \times E_{B-V},
 \end{eqnarray}
@@ -116,8 +107,7 @@ magnitude} of the star.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Absolute Magnitude %%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Intrinsic Brightness of a Star}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude}
+\subsection{The Intrinsic Brightness of a Star}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude}
 
 The final correction that may be made to the magnitude of a star is to
 account for the distance to the star. For example, although the $V$--band magnitude of our Sun is $-26.8$, at a distance of 10 parsecs it would
@@ -125,27 +115,23 @@ appear as a star of magnitude 4.72. In order to be able to catalog a star accord
 to its intrinsic brightness, we calculate its \textbf{absolute
 magnitude ($M$)}. This is defined as the magnitude of the star if observed at a distance
 of 10 parsecs (pc), and is given by:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMag}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMag}
 M & = & m - 5 \log{\frac{d}{10\,pc}},
 \end{eqnarray}
 where $m$ is the dereddened magnitude of the star, and $d$ is its
 distance. For example, the absolute $K$--band magnitude is given by:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMagK}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMagK}
 M_K & = & K_0 - 5 \log{\frac{d}{10\,pc}},
 \end{eqnarray}
 where $K_0$ is the dereddened $K$--band magnitude of the star. A
 similar equation holds for the $J$--band:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMagJ}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:AbsoluteMagnitude:eqn:AbsMagJ}
 M_J & = & J_0 - 5 \log{\frac{d}{10\,pc}}.
 \end{eqnarray}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectroscopy %%%%%%%%%%%%%%%%%%%
 
-\section{Spectroscopy}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy}
+\section{Spectroscopy}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy}
 
 As well as measuring the amount of light from a celestial object using
 photometry, we can also study the spectrum of that light. This is
@@ -161,15 +147,13 @@ feature by calculating the \textbf{equivalent width} of the line. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Equivalent Width %%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Equivalent Width of a Spectral Feature}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth}
+\subsection{The Equivalent Width of a Spectral Feature}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth}
 
 The \textbf{equivalent width} of a spectral absorption or emission line is a measure of the strength
 of the feature, and is defined as the width of a perfectly black line
 having the same total absorption or emission as the real line. It can
 be expressed as:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth:eqn:equiv}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth:eqn:equiv}
 |W| = \int \frac{F_c - F_{\lambda}}{F_c} d\lambda,
 \end{eqnarray}
 where $F_c$ is the flux due to the continuum, $F_{\lambda}$ is the
@@ -194,8 +178,7 @@ Figure~%
 \caption{%
 Example of a spectral absorption line at $\lambda=\lambda_0$,
 indicating the equivalent width $W$ of the
-feature (Carroll \& Ostlie 1996). }%
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth:fig:CarrollEquiv}
+feature (Carroll \& Ostlie 1996). }\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:EquivalentWidth:fig:CarrollEquiv}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,18 +187,16 @@ feature (Carroll \& Ostlie 1996). }%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Radial Velocity %%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Radial Velocity of the Secondary Star}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity}
+\subsection{The Radial Velocity of the Secondary Star}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity}
 
-We used spectroscopy in order to verify that the disk in our target system was not contaminating the light curve of the binary. We also measured the \textbf{radial velocity} of the secondary star, so as to confirm that our spectra were consistent with past observations. This was especially necessary as these were the first high signal-to-noise $K$--band spectra of a black hole X--ray
+We used spectroscopy in order to verify that the disk in our target system was not contaminating the light curve of the binary. We also measured the \textbf{radial velocity} of the secondary star, so as to confirm that our spectra were consistent with past observations. This was especially necessary as these were the first high signal-to-noise $K$--band spectra of a black hole X-ray
 transient system.
 
 \vspace{\myparskip}
 
 The radial velocity of the secondary star in a
 binary system may be calculated from:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:Vr}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:Vr}
 v_r = \gamma + K_2 \sin{(2\pi\phi)},
 \end{eqnarray}
 where $\gamma$ is the systematic velocity of the binary system, and
@@ -226,8 +207,7 @@ $\phi$ is the orbital phase of the binary.
 The radial velocity can be measured from the
 Doppler shift of the observed wavelengths of the spectral features
 in the spectrum of the star, which is a result of the motion of the star relative to the observer along their line of sight. This shift is given by:%
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:shift}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:shift}
 \Delta\lambda     & = & \lambda_{\mathrm{obs}} - \lambda,\\
                & = & \frac{v_r \lambda}{c},
 \end{eqnarray}
@@ -235,8 +215,7 @@ where $\lambda$ and $\lambda_{\mathrm{obs}}$ are the rest and
 observed wavelengths, respectively, of the spectral
 feature. Therefore, if we know $\Delta\lambda$, we can also calculate the
 radial velocity from:%
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:vr2}
+\begin{eqnarray}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:vr2}
 v_r = \frac{\Delta\lambda}{\lambda} c.
 \end{eqnarray}
 
@@ -248,12 +227,11 @@ determined from the $\Delta\lambda$ measured from the spectrum of the star, to e
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Infrared Astronomy %%%%%%%%%%%%%%%%%%%%
 
-\section{Advantages of IR Observations of \groj}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy}
+\section{Advantages of IR Observations of \groj}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy}
 
-This thesis is concerned with the infrared observations of the X--ray binary\\%
+This thesis is concerned with the infrared observations of the X-ray binary\\%
 % WHITE SPACE %
-\groj. Although X--ray binaries emit energy primarily as X--rays, our
+\groj. Although X-ray binaries emit energy primarily as X-rays, our
 observations of \groj\ were made at infrared wavelengths,
 (the $J$--, $K$-- and $K_{s}$--bands). This section explains the
 advantages for doing so, as well as the drawbacks of infrared
@@ -261,16 +239,14 @@ observations. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Dominance of Secondary %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Dominance of Secondary}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:DominanceOfSecondary}
+\subsubsection{Dominance of Secondary}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:DominanceOfSecondary}
 
 
 A luminous accretion disk in a binary system will be bluer than the secondary star, and should contribute less in the infrared than in the optical. Hence this intrinsic emission from the secondary star should dominate in the infrared, and this will allow a better estimate of the brightness of the secondary to be made. This increases the likelihood of tightly constraining the mass ratio, inclination and black hole mass through infrared observations. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Infrared Spectroscopy %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Disk Contamination and Infrared Spectroscopy}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:InfraredSpectroscopy}
+\subsubsection{Disk Contamination and Infrared Spectroscopy}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:InfraredSpectroscopy}
 
 If we ignore the accretion disk contribution for a given binary
 system, we cannot be certain that we are not underestimating the
@@ -286,8 +262,7 @@ quiescence. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Interstellar Extinction %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Interstellar Extinction}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:InterstellarExtinction}
+\subsubsection{Interstellar Extinction}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:InterstellarExtinction}
 
 In general, the $K$--band interstellar extinction, $A_K$, is nine times smaller
  than visual band extinction, $A_V$ ($A_K \sim 0.114\ A_V$: %
@@ -302,8 +277,7 @@ less obscured in the infrared, which improves the quality of images taken at the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Improved Resolution %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Improved Spatial Resolution}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:ImprovedResolution}
+\subsubsection{Improved Spatial Resolution}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:ImprovedResolution}
 
 More generally, the resolution of an observation specifies the minimum angular
 separation required between two stars for the pair to be
@@ -320,8 +294,7 @@ the infrared offers better quality images than the optical
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Disadvantages %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Disadvantages}
-\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:Disadvantages}
+\subsubsection{Disadvantages}\label{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:Disadvantages}
 
 The main disadvantage of infrared photometry is that the background
 is much higher relative to that at, for example, optical
@@ -343,8 +316,7 @@ Once we make our infrared observations of a target star, we have to perform eith
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Photometric Data Reduction %%%%%%%%%%%%%%%%%%%%
 
-\section{Reduction of Infrared Photometric Data}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry}
+\section{Reduction of Infrared Photometric Data}\label{cha:InfraredDataReductionTechniques:sec:Photometry}
 
 We can employ photometry to determine the brightness of a binary star
 from infrared observations of that star. The raw images of the star are first processed to improve their quality. This is known as \textbf{Image Reduction}. Then we obtain the magnitude of the target star relative to
@@ -357,8 +329,7 @@ account.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% IRAF and DS9 %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\iraf\ and \texttt{DS9}}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:IRAFAndDS9}
+\subsection{\iraf\ and \texttt{DS9}}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:IRAFAndDS9}
 
 Much of the image reduction and data analysis performed can be done using
 the \textbf{Image Reduction and Analysis Facility (IRAF)} package
@@ -377,11 +348,10 @@ Astrophysical Observatory Research and Development Group. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Reduction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Image Reduction}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:ImageReduction}
+\subsection{Image Reduction}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:ImageReduction}
 
 Our observations involve centering the telescope on the target and
-then obtaining a group of images -- normally nine images are obtained
+then obtaining a group of images --- normally nine images are obtained
 per group. The images form a grid, with each image offset by
 approximately 10\% of the field of view from a common point in the
 sky. %
@@ -396,8 +366,7 @@ reduction procedure may be found in \S~%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Background Subtraction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Background Subtraction}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:BackgroundSubtraction}
+\subsection{Background Subtraction}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:BackgroundSubtraction}
 
 As mentioned on page~%
 \pageref{cha:InfraredDataReductionTechniques:sec:InfraredAstronomy:subsubsec:Disadvantages},%
@@ -428,8 +397,7 @@ grid of images. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Flatfield %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Flatfield}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:Flatfield}
+\subsection{Flatfield}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:Flatfield}
 
 Having subtracted the background image, we then take into
 account the intrinsic
@@ -467,8 +435,7 @@ subtracted images are divided by this flatfield. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bad Pixels %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Bad Pixels}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:BadPixels}
+\subsection{Bad Pixels}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:BadPixels}
 
 Some of the pixels in a detector may not respond properly to radiation
 of any wavelength, and record an excessively high or low value for the
@@ -489,8 +456,7 @@ the \texttt{badpiximage} command to create a bad pixel map. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Combining the Grid %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Combining the Grid}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:CombiningTheGrid}
+\subsection{Combining the Grid}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:CombiningTheGrid}
 
 We can now combine all the processed images to produce high quality images of our target.%
 
@@ -513,8 +479,7 @@ unacceptable quality are discarded. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Relative Photometry %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Relative Photometry}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry}
+\subsection{Relative Photometry}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry}
 
 Once processed images have been acquired, it is possible to determine
 the brightness of the stars in the field of view. For
@@ -542,8 +507,7 @@ Relative photometry can be carried out using the \iraf\ adaptation of the \textt
 (See \S~%
 \vref{cha:IRAF:sec:Photometry:subsec:DAOPHOT}%
 \ for details of this procedure.) %
-Firstly, we select a constant star (which we denote as our \textbf{comparison star})%
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry:topic:comparison}%
+Firstly, we select a constant star (which we denote as our \textbf{comparison star})\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry:topic:comparison}%
 \ of comparable brightness to our target star, and several bright constant stars in the field of view (our \textbf{reference stars}). These stars, together with our target star, are denoted as our stars of
 interest. Secondly, \texttt{DAOPHOT} is run to remove near neighbours of the selected
 stars. Several isolated faint stars in the field of view are chosen
@@ -560,15 +524,13 @@ comparison star. The light curve of the comparison star generated in this way ca
 
 Finally, in order to estimate the average magnitude of the possibly
 variable star, we obtain the \textbf{phase averaged relative
-magnitude}:%
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry:topic:parm}%
+magnitude}:\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:RelativePhotometry:topic:parm}%
 \ we average the values for the magnitude of our target star
 relative to one particular reference star.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aperture Photometry and Photometric Calibration %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Aperture Photometry and Photometric Calibration}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:AperturePhotometry}
+\subsection{Aperture Photometry and Photometric Calibration}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:AperturePhotometry}
 
 Although we now have the magnitude of our star relative to a constant
 star, we don't know the actual magnitude of the star itself. This we

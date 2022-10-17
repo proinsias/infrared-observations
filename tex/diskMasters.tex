@@ -1,23 +1,22 @@
+% chktex-file 44
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Accretion Disk Contamination %%%%%%%%%%%%%%%%%%%%
 
-\chapter{The Accretion Disk Contamination}
-\label{cha:AccretionDiskContamination}
+\chapter{The Accretion Disk Contamination}\label{cha:AccretionDiskContamination}
 
 Although we have now obtained a value for the mass of the black hole in \\%
 % WHITE SPACE %
-\groj, this is not  be a reliable estimate, unless we first confirm that the disk contamination is negligible in this system. Here we discuss the application of infrared spectroscopic techniques to determine from the spectral features of \groj the contribution of the accretion disk. %
+\groj, this is not  be a reliable estimate, unless we first confirm that the disk contamination is negligible in this system.
+Here we discuss the application of infrared spectroscopic techniques to determine from the spectral features of \groj\ the contribution of the accretion disk. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectroscopy of \groj %%%%%%%%%%%%%%%%%%%%
 
-\section{Spectroscopy of \groj}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy}
+\section{Spectroscopy of \groj}\label{cha:AccretionDiskContamination:sec:Spectroscopy}
 
 We processed the NIRSPEC data as follows to obtain spectra from which we could accurately measure the absorption and emission features present in the spectrum of \groj.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Initial Reduction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{The Initial Reduction}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction}
+\subsection{The Initial Reduction}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction}
 
 We first subtracted the background from the spectra of our target \groj, and also for the spectra
 of \mbox{HD 326320}, an A0 star (see page~%
@@ -28,8 +27,7 @@ of \mbox{HD 326320}, an A0 star (see page~%
 
 The gain and read noise for the NIRSPEC detector were
 obtained from the instrument webpage%
-\footnote{%
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction:foot:Nirspec}
+\footnote{\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction:foot:Nirspec}
 \url{http://www2.keck.hawaii.edu:3636/realpublic/inst/nirspec/nirspec.html} }%
 . 1-D spectra were then extracted from the background subtracted images, using
 these parameter values in \textit{apall}. (See \S~\ref{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:SpectraExtraction} for details.) %
@@ -40,8 +38,7 @@ A dispersion correction was calculated and applied to the spectra using the \tex
 \begin{inparaenum}[(i)]
 \item
 We obtained an Argon arc lamp map from the webpage%
-\footnote{%
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction:foot:CGS4}
+\footnote{\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:InitialReduction:foot:CGS4}
 \url{http://www.jach.hawaii.edu/JACpublic/UKIRT/instruments/cgs4/} }%
 \ of the UKIRT CGS4 detector, containing accurate wavelengths of
 numerous spectral lines.
@@ -57,7 +54,7 @@ was fitted to these data.
 \item
 Significantly bad data points
 were identified and removed, and a new fit was applied, with a rms of
-1.6\,\AA.
+1.6\,\AA.\@
 \item The function was then applied to identify the spectral lines in the other
 extracted arc spectra, using the task \texttt{reidentify}. %
 \end{inparaenum}
@@ -78,16 +75,14 @@ spline of order 2. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Removing the Telluric Features %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Removing the Telluric Features}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:TelluricFeatures}
+\subsection{Removing the Telluric Features}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:TelluricFeatures}
 
 Having obtained normalised spectra of our system, we next removed the features in the spectra that were due to atmospheric absorption (see \S~\ref{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:TelluricFeatures}). We had chosen the A0-type star \mbox{HD 326320} to act as our comparison star, due to the scarcity of prominent features in the $K$--band. We masked the only major feature (Br-$\gamma$) in the comparison star spectra, and the target star spectra were then divided by the
 resultant spectrum. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Final Spectrum %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Our Spectrum of \groj}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:CombiningTheSpectra}
+\subsection{Our Spectrum of \groj}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:CombiningTheSpectra}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% j1655editedMasked %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -96,8 +91,7 @@ resultant spectrum. %
 \caption{%
 The $K$--band spectrum of \groj, having been corrected for telluric
 features with reference to an A0 star. The dominant Br-$\gamma$
-feature is marked, together with several weaker features. }
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:CombiningTheSpectra:fig:j1655editedMasked}
+feature is marked, together with several weaker features. }\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:CombiningTheSpectra:fig:j1655editedMasked}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,8 +102,7 @@ The final spectrum was obtained by combining the two corrected target spectra, a
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Disk Contribution %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Determining the Disk Contribution}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution}
+\subsection{Determining the Disk Contribution}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% combinedSpectra %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -117,8 +110,7 @@ The final spectrum was obtained by combining the two corrected target spectra, a
 \includegraphics[width=5.0in]{combinedSpectra}
 \caption{%
 The $K$--band spectra of GRO J1655--40, HR 4031, HR 5017 and HR 4931, with the
-spectral features of interest marked.}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution:fig:combinedSpectra}
+spectral features of interest marked.}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution:fig:combinedSpectra}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,20 +132,19 @@ disk. %
 \vspace{\myparskip}
 
 \begin{table}[htb]
-\caption{Equivalent widths of Br-$\gamma$ feature}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:AbsenceOfDiskContribution:tab:WallaceWidths}
+\caption{Equivalent widths of Br-$\gamma$ feature}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:AbsenceOfDiskContribution:tab:WallaceWidths}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
 
 \begin{center}
-\begin{tabular}{|l|l|c||||l|l|c|}
+\begin{tabular}{l l c l l c}
 
 \hline
-Identifier & Spectral Type & $W_{\lambda}/$\AA & Identifier & Spectral
-Type & $W_{\lambda}/$\AA \\\hline\hline\hline\hline
-\groj\  & F5--G0 III--IV & $10\pm1$ & \mbox{HR 4931} & F2 V & $8\pm1$ \\\hline
-\mbox{HR 7495} & F5 II--III & $7.0\pm0.5$ & \mbox{HR 6927} & F7 V & $4.0\pm0.5$ \\\hline
+Identifier & Spectral Type & $W_{\lambda}/$\AA\ & Identifier & Spectral
+Type & $W_{\lambda}/$\AA\ \\\hline\hline\hline\hline
+\groj\  & F5--G0 III-IV & $10\pm1$ & \mbox{HR 4931} & F2 V & $8\pm1$ \\\hline
+\mbox{HR 7495} & F5 II-III & $7.0\pm0.5$ & \mbox{HR 6927} & F7 V & $4.0\pm0.5$ \\\hline
 \mbox{HR 4031} & F0 III     & $8.5\pm0.5$ & \mbox{HR 6608} & G2 IIIb & $3.0\pm0.5$ \\\hline
 \mbox{HR 5017} & F3 III     & $8\pm1$     & \mbox{HR 7373} & G8 IV & $3\pm1$ \\\hline
 \mbox{HR 21}   & F2 IV      & $7\pm1$     & \mbox{HR 4375} & G0 V & $3\pm1$ \\\hline
@@ -165,7 +156,7 @@ Type & $W_{\lambda}/$\AA \\\hline\hline\hline\hline
 \end{minipage}
 \end{table}
 
-The isolated stars with spectral types of F5--G0 III--IV (the spectral
+The isolated stars with spectral types of F5--G0 III-IV (the spectral
 type of \groj: see %
 \citeNP{BeerPodsiadlowski:2001}%
 ) were chosen from the spectral atlas
@@ -174,8 +165,7 @@ of %
 . Figure~%
 \vref{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution:fig:combinedSpectra}%
 \ displays three of the chosen spectra%
-\footnote{%
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution:foot:wavenumber}%
+\footnote{\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:DiskContribution:foot:wavenumber}%
 The spectra were originally plotted with flux as a function of inverse wavenumber, but we converted them to $\mu$m for comparison with our spectrum. %
 }%
 , together with our spectrum of \groj. The equivalent widths of the Br-$\gamma$ absorption features in the telluric-corrected spectrum of \groj\ and the above stars were measured using \texttt{splot}. Table~%
@@ -188,22 +178,21 @@ As can be clearly seen, the equivalent width for \groj\ agrees well
 with certain stars, namely \mbox{HR 4031}, \mbox{HR 5017} and \mbox{HR
 4931}. This implies that the disk contributes little light to the
 system in the $K$--band, and also that the spectral type of the secondary
-star in \groj\ is within the range F5--F7 III--IV, which is consistent
-with our initial range of F0--G2 III--IV, derived in \S~%
+star in \groj\ is within the range F5--F7 III-IV, which is consistent
+with our initial range of F0--G2 III-IV, derived in \S~%
 \vref{cha:lightcurve:sec:Photometry:subsec:DereddenedMagnitude}%
 . %
 
 \vspace{\myparskip}
 
 \begin{table}[htb]
-\caption{Equivalent widths of weaker features}
-\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:AbsenceOfDiskContribution:tab:Weaker}
+\caption{Equivalent widths of weaker features}\label{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:AbsenceOfDiskContribution:tab:Weaker}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
 
 \begin{center}
-\begin{tabular}{|l||||c|c|c|c|}
+\begin{tabular}{l c c c c}
 
 \hline
 Identifier     & He        & Fe            & Si           & Si/Ti  \\\hline\hline\hline\hline
@@ -226,7 +215,7 @@ in our spectra and those of %
 spectra. These were the He feature at
 $\lambda=20\,590$\,\AA, the Fe line at $\lambda=20\,700$\,\AA, the Si
 feature at $\lambda=21\,360$\,\AA\ and the combined Si/Ti absorption at
-$\lambda=21\,890$\,\AA. The equivalent widths obtained are listed in
+$\lambda=21\,890$\,\AA.\@\ The equivalent widths obtained are listed in
 Table%
 \vref{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:AbsenceOfDiskContribution:tab:Weaker}%
 . %
@@ -239,7 +228,7 @@ emission from the disk, as the absorption features in our spectrum are
 stronger. We can therefore conclude that there is negligible disk
 contamination in \groj\ during quiescence. We compared our results with those of Israelian~et~al.\ %
 \citeyear{Israelian_et_al.:1999}%
-, who found that the atmosphere of \groj\ was similar to that of a standard F6--F7 III--IV star, with an almost solar Fe abundance. They did find, however, an overabundance of $\alpha$--elements, such as Si and Ti. Our results support these conclusions. %
+, who found that the atmosphere of \groj\ was similar to that of a standard F6--F7 III-IV star, with an almost solar Fe abundance. They did find, however, an overabundance of $\alpha$--elements, such as Si and Ti. Our results support these conclusions. %
 
 \vspace{\myparskip}
 
@@ -247,11 +236,10 @@ Hence, there is no evidence of emission from the disk, and we can conclude that 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Radial velocity %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Calculating the Radial Velocity}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:RadialVelocity}
+\subsection{Calculating the Radial Velocity}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:RadialVelocity}
 
 As a check for consistency, we calculated the radial velocity of the
-secondary star in \groj from the published spectroscopic ephemeris during the time of the observation, and compared
+secondary star in \groj\ from the published spectroscopic ephemeris during the time of the observation, and compared
 this theoretical value with that derived from our spectra of this
 system. %
 
@@ -264,8 +252,7 @@ the observation of \groj\ and using the ephemeris of van~der~Hooft et~al.\ %
 $K_2$ from %
 \citeN{OroszBailyn:1997}%
 , namely:
-\begin{eqnarray}
-\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:RadialVelocity:eqn:values}
+\begin{eqnarray}\label{cha:AccretionDiskContamination:sec:Spectroscopy:subsec:RadialVelocity:eqn:values}
 \gamma = -142.4\pm1.6\,\mathrm{km\,s}^{-1},\\
 K_2 = 228.2\pm2.2\,\mathrm{km\,s}^{-1},
 \end{eqnarray}
@@ -276,7 +263,7 @@ we determined that the radial velocity of the secondary at phase
 
 From our telluric-corrected spectrum of \groj, we determined the
 wavelength of the Br-$\gamma$ feature to be
-$\lambda_{\mathrm{obs}}=21\,644.41$\,\AA. Using Equation~%
+$\lambda_{\mathrm{obs}}=21\,644.41$\,\AA.\@\ Using Equation~%
 \vref{cha:InfraredDataReductionTechniques:sec:Spectroscopy:subsec:RadialVelocity:eqn:vr2}%
 , we calculated that the corresponding radial velocity of the
 secondary star is $v_r = -147\pm5\,\mathrm{km}\,\mathrm{s}^{-1}$. We
@@ -285,8 +272,7 @@ the secondary star due to its radial velocity are as expected. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Negligible Disk Contamination %%%%%%%%%%%%%%%%%%%%
 
-\section{Negligible Disk Contamination!}
-\label{cha:AccretionDiskContamination:sec:NegligibleDiskContamination}
+\section{Negligible Disk Contamination!}\label{cha:AccretionDiskContamination:sec:NegligibleDiskContamination}
 
 Having confirmed that \groj\ was indeed in quiescence during our observations in 1998, with little contribution from the accretion disk to the total flux from the binary, we can have confidence in our derived value for the mass ratio, the inclination and most importantly the mass of the black hole. %
 

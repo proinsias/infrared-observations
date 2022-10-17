@@ -13,8 +13,7 @@ Further details about the \iraf\ tasks are available from the
 online \iraf\ help, accessed using the \texttt{help} task
 within \iraf, or from the user manuals for \iraf\ %
 \cite{Barnes:1993} %
-and \texttt{DAOPHOT} %
-\cite{Davis:1994}. %
+and \texttt{DAOPHOT}~\cite{Davis:1994}. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Header %%%%%%%%%%%%%%%%%%%%
 
@@ -57,7 +56,7 @@ arc.
 
 \item The observatory where the observation was made.
 
-\item The name(s) of the observer(s).
+\item The name(s) of the observer(s).% chktex 36
 
 \item The filter band selected.
 
@@ -97,7 +96,7 @@ viewer. A single image may be examined, or a list of images. We used
 
 \item
 We displayed an image using \texttt{DS9} and called the
-\texttt{imexamine} routine within IRAF. %
+\texttt{imexamine} routine within IRAF.\@\
 
 \item
 Next, we edited the parameters for \texttt{imexamine} while the task was
@@ -160,7 +159,7 @@ interactively using two \iraf\ scripts. %
 The first script displayed each image in the grid using
 \texttt{imexamine}. A reference star which is visible in each frame was
 chosen. The coordinates of the star in the first frame was obtained
-using \texttt{imexamine}: the image was displayed, the cross--hairs
+using \texttt{imexamine}: the image was displayed, the cross-hairs
 are placed on the star, and the coordinates were calculated using a
 centroid algorithm and written to a log file. This procedure was
 repeated for the remaining images. %
@@ -193,7 +192,7 @@ and the type of analytical model selected. %
 
 \item[function]
 
-The type of analytical model(s) to be employed for the PSF. Possible
+The type of analytical model(s) to be employed for the PSF.\@\ Possible % chktex 36
 models are: Gaussian, Moffat, Lorentzian, or Gaussian core with
 Lorentzian wings. A value of \textit{auto} for this parameter causes
 \texttt{psf} to determine which model fits the data best (i.e., has
@@ -306,11 +305,11 @@ subtracted from our spectra using \texttt{apall} (\textit{background} = \textit{
 The saturation level of the detector. %
 
 \item[readnoise]
-The read out noise of the detector -- this parameter was automatically
+The read out noise of the detector --- this parameter was automatically
 read from the \textit{RDNOISE} field of the image headers. %
 
 \item[gain]
-The photon gain of the detector -- this was read by \texttt{IRAF} from
+The photon gain of the detector --- this was read by \texttt{IRAF} from
 the \textit{GAIN} header field. %
 
 \end{description}
@@ -341,7 +340,7 @@ this value to be 8 pixels. %
 
 \item[function]
 The function to be applied to fit the dispersion correction. We selected a
-cubic spline -- \textit{spline3}. %
+cubic spline --- \textit{spline3}. %
 
 \item[order]
 The order of \textit{function}. Our spline had order 3. %
