@@ -591,8 +591,7 @@ This process is performed for both the $J$-- and $K_{s}$--band observations. Thi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Dereddened and Absolute Magnitudes %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Dereddened and Absolute Magnitudes}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude}
+\subsection{Dereddened and Absolute Magnitudes}\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude}
 
 We can now calculate the \textbf{dereddened magnitude} of the star by
 determining the necessary corrections to account for interstellar
@@ -605,14 +604,12 @@ extinction (see \S~%
 If we know the value of $E_{B-V}$, we can calculate the $K$--band extinction from Equation~%
 \vref{cha:InfraredDataReductionTechniques:sec:MagnitudeScale:subsec:InterstellarExtinctioneqn:CardelliAK}%
 : %
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:CardelliAK}
+\begin{eqnarray} \label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:CardelliAK}
 A_{K}    & = & 0.114 \times R_V \times E_{B-V}, \nonumber
 \end{eqnarray}
 and similarly for the $J$--band extinction. Then, the dereddened
 magnitude ($K_{0}$) of our target star in the $K$--band can be found via:
-\begin{eqnarray}
-\label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:K0}
+\begin{eqnarray} \label{cha:InfraredDataReductionTechniques:sec:Photometry:subsec:DereddenedMagnitude:eqn:K0}
 K_0 & = & \mathrm{apparent\ } K_{s} \mathrm{\ magnitude} - A_K,
 \end{eqnarray}
 and similarly for the $J$--band. %
@@ -628,8 +625,7 @@ calculated using Equations~%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectroscopic Data Reduction %%%%%%%%%%%%%%%%%%%%
 
-\section{Reduction of Infrared Spectroscopic Data}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData}
+\section{Reduction of Infrared Spectroscopic Data}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData}
 
 Just as we need to correct our photometric data for the background and
 detector pixel variations, we need to process our spectra to
@@ -645,8 +641,7 @@ spectroscopic data can be found in \S~%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Background Subtraction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Background Subtraction}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:BackgroundSubtraction}
+\subsection{Background Subtraction}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:BackgroundSubtraction}
 
 The first step in producing processed spectra is to subtract the background from
 each of the observations. We can do this by selecting two images of our
@@ -658,8 +653,7 @@ is done for the spectra of each star. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectra Extraction %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Spectra Extraction}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:SpectraExtraction}
+\subsection{Spectra Extraction}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:SpectraExtraction}
 
 The background subtracted images are then processed using
 \texttt{apall} to obtain 1-D spectra for each star. An Argon arc lamp spectrum is also extracted for
@@ -667,8 +661,7 @@ each star, using the trace for the star to trace the corresponding arc. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Wavelength Calibration %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Wavelength Calibration}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:WavelengthCalibration}
+\subsection{Wavelength Calibration}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:WavelengthCalibration}
 
 The extracted spectra are plotted to display the flux from the star
 detected by each pixel of the detector. However, in order to compare
@@ -682,8 +675,7 @@ corresponding wavelength for each pixel. This dispersion correction is then appl
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Normalisation %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Normalisation}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:Normalisation}
+\subsection{Normalisation}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:Normalisation}
 
 To study the absorption and emission features in the spectra, it is useful to normalise the spectra to the continuum flux. We normalise our
 wavelength-calibrated spectra by using the task \texttt{continuum} to
@@ -692,8 +684,7 @@ fit the continuum of each spectrum to a spline of order 2. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Telluric Features %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Removing Telluric Features}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:TelluricFeatures}
+\subsection{Removing Telluric Features}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:TelluricFeatures}
 
 Next, the telluric
 features present in raw spectra must be removed. This is especially
@@ -721,8 +712,7 @@ features in our spectra of our comparison star are telluric. This feature is mas
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Combining the Spectra  %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Combining the Spectra}
-\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:CombiningTheSpectra}
+\subsection{Combining the Spectra}\label{cha:InfraredDataReductionTechniques:sec:SpectroscopyData:subsec:CombiningTheSpectra}
 
 The two target star spectra, corrected for telluric features using the comparison
 star, are combined using \texttt{scombine} (\textit{combine} set to
@@ -731,8 +721,7 @@ star, are combined using \texttt{scombine} (\textit{combine} set to
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Our System of Interest %%%%%%%%%%%%%%%%%%%%
 
-\section{Our System of Interest}
-\label{cha:InfraredDataReductionTechniques:sec:SystemOfInterest}
+\section{Our System of Interest}\label{cha:InfraredDataReductionTechniques:sec:SystemOfInterest}
 
 We now consider \groj\ in detail and present the reasons for studying
 this transient. We will then apply the data reduction techniques we have outlined to this system, and attempt to obtain an estimate for the mass of the primary star within this binary

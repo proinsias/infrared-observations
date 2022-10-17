@@ -1,24 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% ELC %%%%%%%%%%%%%%%%%%%%
 
-\chapter{The Eclipsing Light Curve Code}
-\label{cha:ELC}
+\chapter{The Eclipsing Light Curve Code}\label{cha:ELC}
 
 Having obtained the light curve of \groj, we attempted to model the data through numerical simulations of the X--ray binary. Here we outline the components of the model, and discuss the values obtained for the mass ratio and inclination.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction to ELC %%%%%%%%%%%%%%%%%%%%
 
-\section{Introduction to \textit{ELC}}
-\label{cha:ELC:sec:IntroductionELC}
+\section{Introduction to \textit{ELC}}\label{cha:ELC:sec:IntroductionELC}
 
 The \textbf{Eclipsing Light Curve} (\textit{ELC}) code%
-\footnote{%
-\label{cha:ELC:sec:IntroductionELC:foot:ELC}
+\footnote{\label{cha:ELC:sec:IntroductionELC:foot:ELC}
 We ran version 2 of this program, as described by the author in %
 \citeN{OroszHauschildt:2000:cantcheck}%
 }%
 \ was written by Jerome A.\ Orosz, of the Universiteit Utrecht in
-the Netherlands\footnote{%
-\label{cha:ELC:sec:IntroductionELC:foot:Orosz}%
+the Netherlands\footnote{\label{cha:ELC:sec:IntroductionELC:foot:Orosz}%
 The author is now in San Diego State University. %
 }%
 . This suite of programs creates a theoretical model of a star
@@ -53,8 +49,7 @@ The three \textit{ELC} programs that were employed in our modelling were:
 \begin{itemize}
 
 \item \texttt{ELC}%
-\footnote{%
-\label{cha:ELC:sec:IntroductionELC:foot:ELCabbrev}
+\footnote{\label{cha:ELC:sec:IntroductionELC:foot:ELCabbrev}
 Note that the abbreviation ELC can refer to either the suite of
 programs (referred to in this text by the use of italics:
 \textit{ELC}) or this specific program (referred to by using typewriter
@@ -80,13 +75,11 @@ We utilised these \textit{ELC} programs to model both the 1998 and
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1998 $K_s$--band Data %%%%%%%%%%%%%%%%%%%%
 
-\section{The 1998 $K_s$--band Data}
-\label{cha:ELC:sec:1998Results}
+\section{The 1998 $K_s$--band Data}\label{cha:ELC:sec:1998Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Details of Model %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Details of the Quiescent Model}
-\label{cha:ELC:sec:1998Results:subsec:model}
+\subsection{Details of the Quiescent Model}\label{cha:ELC:sec:1998Results:subsec:model}
 
 The quiescent observations of \groj\ were modelled by accounting only
 for the ellipsoidal variability of the secondary star. The disk contribution to
@@ -101,8 +94,7 @@ star. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Modelling Procedure %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Modelling Procedure for the 1998 Data}
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure}
+\subsection{Modelling Procedure for the 1998 Data}\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure}
 
 The following procedure details how we modelled the 1998 observations
 of \\%
@@ -123,8 +115,7 @@ Figure~%
 \ for the plot of this light curve. %
 
 \begin{table}[htb]
-\caption{Fixed \textit{ELC} Binary System Parameters}
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms}
+\caption{Fixed \textit{ELC} Binary System Parameters}\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -155,13 +146,11 @@ separ        & Orbital separation            & $\sim16$\,R\ensuremath{_{\odot}}\
 Teff1        & Mean temperature, star 1        & $\sim6400$\,K\beerstellar \\\hline
 Teff2        & Mean temperature, star 2        & $<0$\,K\bh \\\hline
 fill1        & Roche lobe filling factor, star 1     & 1.000%
-\footnote{%
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:mass}%
+\footnote{\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:mass}%
 Since accretion continues in quiescence (see \S~\vref{cha:Introduction:sec:X--rayBinaries:subsec:Quiescence}). }%
 \\\hline
 fill2        & Roche lobe filling factor, star 2    & 0.000%
-\footnote{%
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:bh}
+\footnote{\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCBinaryParms:foot:bh}
 Primary star is a black hole.}%
 \\\hline
 eccen        & Eccentricity of orbit            & 0\pringle \\\hline
@@ -181,8 +170,7 @@ omega2        & Ratio of rotational to orbital frequency, star 2 & 1\pringle \\\
 \nocite{BeerPodsiadlowski:2001}
 
 \begin{table}[htb]
-\caption{Fixed \textit{ELC} Parameters}
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCParms}
+\caption{Fixed \textit{ELC} Parameters}\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:FixELCParms}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -214,8 +202,7 @@ The literature was consulted for values of the parameters in Table~%
 were set from experience. %
 
 \begin{table}[htb]
-\caption{Values of Variable \textit{ELC} Parameters for 1998 Data}
-\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:VarELCParms}
+\caption{Values of Variable \textit{ELC} Parameters for 1998 Data}\label{cha:ELC:sec:1998Results:subsec:ModellingProcedure:tab:VarELCParms}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -281,8 +268,7 @@ parameters were noted.
 The $\Chi^2$ value of the fit of the model to the observations was
 determined using \mbox{\texttt{checkfit}}, from which the reduced
 chi-squared%
-\footnote{%
-\label{cha:ELC:sec:IntroductionELC:foot:chi2}
+\footnote{\label{cha:ELC:sec:IntroductionELC:foot:chi2}
 %(\citeN{McCarthy:1999} p.~19) %
 The reduced chi-squared ($\Chi^{2}_{\nu}$) of the fit is defined by: %
 \[ \Chi^{2}_{\nu} = \frac{\Chi^2}{n-p-1}, \]
@@ -297,8 +283,7 @@ superimposed for a visual check of the fit. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comparison of Model and Results %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Comparison of Quiescent Model and Results}
-\label{cha:ELC:sec:1998Results:subsec:comparison}%
+\subsection{Comparison of Quiescent Model and Results}\label{cha:ELC:sec:1998Results:subsec:comparison}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% kctio98fit %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]%
@@ -306,8 +291,7 @@ superimposed for a visual check of the fit. %
 \includegraphics[width=5.0in]{kctio98fit}%
 \caption{%
 The observed $K_s$ light curve for \groj\ in May/June 1998, together with a theoretical light curve computed for a mass ratio of $2$ and a binary inclination of $69\degr$. %
-Two orbital cycles are shown for clarity.}%
-\label{cha:ELC:sec:1998Results:subsec:comparison:fig:kctio98fit}%
+Two orbital cycles are shown for clarity.}\label{cha:ELC:sec:1998Results:subsec:comparison:fig:kctio98fit}%
 \end{center}%
 \end{figure}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -316,8 +300,7 @@ As can be seen in Figure~%
 \vref{cha:ELC:sec:1998Results:subsec:comparison:fig:kctio98fit}%
 , the data were well modelled by our theoretical light curve, and we
 obtained $\Chi_{\nu}^{2} = 0.51$ as the reduced chi-squared%
-\footnote{%
-\label{cha:ELC:sec:1998Results:foot:LowError}
+\footnote{\label{cha:ELC:sec:1998Results:foot:LowError}
 We interpret this low $\Chi_{\nu}^{2}$ value as signifying that
 \texttt{DAOPHOT} is overestimating the errors for the estimates of the
 relative magnitude of \groj. }. %
@@ -326,8 +309,7 @@ secondary, with the expected deeper minimum at phase 0.5. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Derived Mass Ratio and Inclination %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Derived Mass Ratio and Inclination}
-\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedQ}
+\subsubsection{Derived Mass Ratio and Inclination}\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedQ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% contourPlot2  %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -336,8 +318,7 @@ secondary, with the expected deeper minimum at phase 0.5. %
 \caption{%
 The $\chi^2$ contour plot for the 1998 $K_{s}$--band data. This plot displays the 68\%, 90\% and
  99\% confidence levels from the \texttt{ELC} fits, together with constraint curves derived from the mass function assuming a secondary mass of 1\,M\sun and 3\,M\sun, respectively. (The minimum reduced $\chi^2$ has been set equal to 1.) %
-}
-\label{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2}
+}\label{cha:ELC:sec:1995Results:subsec:comparison:fig:contourPlot2}
 \end{center}
 \end{figure}
 
@@ -359,8 +340,7 @@ inclination $i$ of \groj\ with those from other studies of this system. From thi
 consistent with past estimates. %
 
 \begin{table}[htb]
-\caption{Comparison of Derived Values for $q$ and $i$}
-\label{cha:ELC:sec:1998Results:tab:ComparisonOfResults}
+\caption{Comparison of Derived Values for $q$ and $i$}\label{cha:ELC:sec:1998Results:tab:ComparisonOfResults}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -388,8 +368,7 @@ van~der~Hooft et~al.\ \citeyear{VanDerHooft_et_al.:1998}    & 2.43--4.20     & $
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Derived Component Masses %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Derived Component Masses}
-\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedm}
+\subsubsection{Derived Component Masses}\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedm}
 
 Using our values for $q$ from the 1998 data ($q=2.5$--$6$) and the
 corresponding secondary masses ($M_{2}=1$--$3$\,M\sun), we derived the
@@ -398,8 +377,7 @@ mass of the primary as $6.8\pm0.7$\,M\sun. This is to be compared in particular 
 \ compares this mass with masses from earlier studies. %
 
 \begin{table}[htb]
-\caption{Comparison of Derived Values for $M_X$}
-\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedm:tab:ComparisonOfResults}
+\caption{Comparison of Derived Values for $M_X$}\label{cha:ELC:sec:1998Results:subsec:comparison:subsubsec:derivedm:tab:ComparisonOfResults}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -431,13 +409,11 @@ object in \groj\ is a black hole, if we accept the neutron star mass limit of \c
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1995 $K_s$--band Data %%%%%%%%%%%%%%%%%%%%
 
-\section{The 1995 $K_s$--band Data}
-\label{cha:ELC:sec:1995Results}
+\section{The 1995 $K_s$--band Data}\label{cha:ELC:sec:1995Results}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Details of Model %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Details of Outburst Model}
-\label{cha:ELC:sec:1995Results:subsec:model}
+\subsection{Details of Outburst Model}\label{cha:ELC:sec:1995Results:subsec:model}
 
 The model for the outburst of \groj\ included:
 \begin{inparaenum}[(i)]
@@ -451,12 +427,10 @@ eclipses of the accretion disk and the secondary.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Modelling Procedure %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Modelling Procedure for the 1995 Data}
-\label{cha:ELC:sec:1995Results:subsec:ModellingProcedure}
+\subsection{Modelling Procedure for the 1995 Data}\label{cha:ELC:sec:1995Results:subsec:ModellingProcedure}
 
 \begin{table}[htb]
-\caption{Values of Variable \textit{ELC} Parameters for 1995 Data Set}
-\label{cha:ELC:sec:1995Results:subsec:ModellingProcedure:tab:paramvalues}
+\caption{Values of Variable \textit{ELC} Parameters for 1995 Data Set}\label{cha:ELC:sec:1995Results:subsec:ModellingProcedure:tab:paramvalues}
 
 \begin{minipage}{\linewidth}
 \renewcommand{\thefootnote}{\thempfootnote}
@@ -508,8 +482,7 @@ and applied these values in our attempt to fit the outburst data.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comparison of Model and Results %%%%%%%%%%%%%%%%%%%%
 
-\subsection{A Poor Fit}
-\label{cha:ELC:sec:1995Results:subsec:comparison}
+\subsection{A Poor Fit}\label{cha:ELC:sec:1995Results:subsec:comparison}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% kctio95fixedfit %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -519,8 +492,7 @@ and applied these values in our attempt to fit the outburst data.
 The June 1995 $K_s$ light curve of \groj, with a model
 light curve using the mass ratio and inclination from the best fits of
 the 1998 data set ($q=2$, $i=69\degr$). %
-}
-\label{cha:ELC:sec:1995Results:subsec:comparison:fig:kctio95fixedfit}
+}\label{cha:ELC:sec:1995Results:subsec:comparison:fig:kctio95fixedfit}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -532,8 +504,7 @@ obtained a reduced chi-squared of $\Chi_{\nu}^{2} = 5.89$. The fit is much poore
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Accretion Disk %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{The Accretion Disk}
-\label{cha:ELC:sec:1995Results:subsec:comparison:subsubsec:disk}
+\subsubsection{The Accretion Disk}\label{cha:ELC:sec:1995Results:subsec:comparison:subsubsec:disk}
 
 Since \groj\ was in outburst at the time of these observations, the
 flux from the accretion disk was more significant than the ellipsoidal
@@ -566,8 +537,7 @@ $\Chi^2$ values from modelling their outburst data than from their quiescent dat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Confirming Our Assumption of Negligible Disk Contribution
  %%%%%%%%%%%%%%%%%%%%
 
-\section{Does the Accretion Disk Contribute?}
-\label{cha:ELC:sec:ConfirmingOurAssumption}
+\section{Does the Accretion Disk Contribute?}\label{cha:ELC:sec:ConfirmingOurAssumption}
 
 Although we have now obtained a plausible value for the mass of the black hole in \groj, we made the assumption that the contribution of the accretion disk in the infrared was negligible. In the following chapter, we explain how we confirmed this assumption from infrared spectroscopy of the binary system.
 

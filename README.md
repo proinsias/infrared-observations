@@ -2,7 +2,7 @@
 
 MSc dissertation, Francis T. O'Donovan, October 2003.
 
-_Source:_ <http://library.ucc.ie/record=b1373041>
+_Source:_ <https://library.ucc.ie/record=b1373041>
 
 _Mirrors:_
 

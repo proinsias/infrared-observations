@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% IRAF %%%%%%%%%%%%%%%%%%%%
 
-\chapter{IRAF}
-\label{cha:IRAF}
+\chapter{IRAF}\label{cha:IRAF}
 
 This appendix gives more specifics of the commands used for reduction
 and analysis. The parameters of some of the tasks are listed and
@@ -19,8 +18,7 @@ and \texttt{DAOPHOT} %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Header %%%%%%%%%%%%%%%%%%%%
 
-\section{The Image Header}
-\label{cha:IRAF:sec:Imhead}
+\section{The Image Header}\label{cha:IRAF:sec:Imhead}
 
 Each \texttt{IMH} image contains a series of text lines, known as the
 \textbf{image header}, %
@@ -83,13 +81,11 @@ the header. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Photometry %%%%%%%%%%%%%%%%%%%%
 
-\section{Photometry}
-\label{cha:IRAF:sec:Photometry}
+\section{Photometry}\label{cha:IRAF:sec:Photometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Imexamine %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{Imexamine}}
-\label{cha:IRAF:sec:Photometry:subsec:Imexamine}
+\subsection{\texttt{Imexamine}}\label{cha:IRAF:sec:Photometry:subsec:Imexamine}
 
 The \texttt{imexamine} routine is run to extract information
 interactively from an image displayed in the \texttt{DS9} image
@@ -124,8 +120,7 @@ include: %
 
     User defined zero point for magnitude scale. This value was
     determined from: %
-    \begin{eqnarray}
-    \label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:magzero}
+    \begin{eqnarray}\label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:magzero}
     \mathrm{magzero} = 10 + 2.5 \log{f_{10} I} - k \Chi,
     \end{eqnarray}
     where $f_{10}$ is the counts per second detected from a star of
@@ -134,8 +129,7 @@ include: %
     and the airmass for the observation, respectively. Then the
     magnitude ($m$) of the star can be calculated by
     \texttt{imexamine} using: %
-    \begin{eqnarray}
-    \label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:mag}
+    \begin{eqnarray}\label{cha:IRAF:sec:Photometry:subsec:Imexamine:eqn:mag}
     m = \mathrm{magzero} - 2.5 \log_{10}{F},
     \end{eqnarray}
     where $F$ is the counts from the star, measured by aperture
@@ -156,8 +150,7 @@ This procedure was then repeated for the next image. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Image Shifting %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Image Shifting}
-\label{cha:IRAF:sec:Photometry:subsec:Imshift}
+\subsection{Image Shifting}\label{cha:IRAF:sec:Photometry:subsec:Imshift}
 
 The required shifting of the images in each grid was done
 interactively using two \iraf\ scripts. %
@@ -182,8 +175,7 @@ output=image\_sft.imh}. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% DAOPHOT Options %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{DAOPHOT} Options}
-\label{cha:IRAF:sec:Photometry:subsec:DAOPHOTOptions}
+\subsection{\texttt{DAOPHOT} Options}\label{cha:IRAF:sec:Photometry:subsec:DAOPHOTOptions}
 
 A PSF model generally consists of two components:
 \begin{inparaenum}[(i)]
@@ -241,8 +233,7 @@ this point to the centre of the star was selected as the value for
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% DAOPHOT Procedure %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{DAOPHOT} Procedure}
-\label{cha:IRAF:sec:Photometry:subsec:DAOPHOT}
+\subsection{\texttt{DAOPHOT} Procedure}\label{cha:IRAF:sec:Photometry:subsec:DAOPHOT}
 
 The \texttt{DAOPHOT} parameters having been set to their correct
 values, a list of the stars of interest and their coordinates was
@@ -279,13 +270,11 @@ Determines the magnitude of the selected stars. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Spectroscopy %%%%%%%%%%%%%%%%%%%%
 
-\section{Spectroscopy}
-\label{cha:IRAF:sec:Spectroscopy}
+\section{Spectroscopy}\label{cha:IRAF:sec:Spectroscopy}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Apall %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{Apall}}
-\label{cha:IRAF:sec:Spectroscopy:subsec:apall}
+\subsection{\texttt{Apall}}\label{cha:IRAF:sec:Spectroscopy:subsec:apall}
 
 This routine was used to extract the spectra from the raw
 images. \texttt{Apall} automatically distinguishes the spectrum of the
@@ -329,8 +318,7 @@ the \textit{GAIN} header field. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Identify %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{Identify}}
-\label{cha:IRAF:sec:Spectroscopy:subsec:identify}
+\subsection{\texttt{Identify}}\label{cha:IRAF:sec:Spectroscopy:subsec:identify}
 
 \texttt{Identify} was used to display an arc spectrum and match the
 spectral features with their corresponding wavelengths. It then
@@ -362,8 +350,7 @@ The order of \textit{function}. Our spline had order 3. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Reidentify %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{Reidentify}}
-\label{cha:IRAF:sec:Spectroscopy:subsec:reidentify}
+\subsection{\texttt{Reidentify}}\label{cha:IRAF:sec:Spectroscopy:subsec:reidentify}
 
 Rather than using \texttt{identify} on each individual arc, the
 \texttt{reidentify} task was run in order to apply the previous
@@ -395,8 +382,7 @@ Again, the coordinate list \textit{linelists\$argon.dat} was selected. %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Splot %%%%%%%%%%%%%%%%%%%%
 
-\subsection{\texttt{Splot}}
-\label{cha:IRAF:sec:Spectroscopy:subsec:splot}
+\subsection{\texttt{Splot}}\label{cha:IRAF:sec:Spectroscopy:subsec:splot}
 
 \texttt{Splot} can be used to extract various properties
 interactively from a spectrum. Either a single spectrum, or a
